@@ -1,0 +1,74 @@
+[
+  {
+    "title": "How to reset password?",
+    "description": "Go to settings > security.",
+    "category": "5f8d0d55b54764421b7156f2",
+    "active": true
+  },
+  {
+    "title": "How to request leave?",
+    "description": "Use the HR portal.",
+    "category": "5f8d0d55b54764421b7156f2",
+    "active": true
+  },
+  {
+    "title": "WiFi password?",
+    "description": "It is 'Guest123'.",
+    "category": "5f8d0d55b54764421b7156c9",
+    "active": true
+  },
+  {
+    "title": "VPN Access",
+    "description": "Request via IT Ticket.",
+    "category": "5f8d0d55b54764421b7156c9",
+    "active": true
+  },
+  {
+    "title": "Payroll dates?",
+    "description": "25th of every month.",
+    "category": "5f8d0d55b54764421b7156f2",
+    "active": true
+  },
+  {
+    "title": "Emergency contacts?",
+    "description": "Call 999 or security desk.",
+    "category": "5f8d0d55b54764421b7156c9",
+    "active": true
+  },
+  {
+    "title": "Office Hours?",
+    "description": "9 AM to 5 PM.",
+    "category": "5f8d0d55b54764421b7156f2",
+    "active": true
+  },
+  {
+    "title": "Dress Code?",
+    "description": "Business Casual.",
+    "category": "5f8d0d55b54764421b7156f2",
+    "active": true
+  },
+  {
+    "title": "Expense Reimbursement",
+    "description": "Submit receipts to Finance.",
+    "category": "5f8d0d55b54764421b7156f2",
+    "active": true
+  },
+  {
+    "title": "Parking Spot",
+    "description": "Fill form at reception.",
+    "category": "5f8d0d55b54764421b7156c9",
+    "active": true
+  },
+  {
+    "title": "Visitor Policy",
+    "description": "All visitors must sign in.",
+    "category": "5f8d0d55b54764421b7156c9",
+    "active": true
+  },
+  {
+    "title": "Meeting Rooms",
+    "description": "Book via Calendar.",
+    "category": "5f8d0d55b54764421b7156c9",
+    "active": true
+  }
+]

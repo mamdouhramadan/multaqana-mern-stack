@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Documentation - Multaqana</title>
+  <!-- Style CSS (Includes Materialize & Fonts) -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Sidenav -->
+  <ul id="slide-out" class="sidenav sidenav-fixed">
+    <li>
+      <div class="logo-text text-indigo">Multaqana<span style="color:#757575;">API</span></div>
+    </li>
+    <li>
+      <div class="divider"></div>
+    </li>
+
+    <li>
+      <div class="subheader">Modules</div>
+    </li>
+    <li><a href="#intro" class="waves-effect">Introduction</a></li>
+    <li><a href="#videos" class="waves-effect">Videos</a></li>
+    <li><a href="#albums" class="waves-effect">Photo Albums</a></li>
+    <li><a href="#files" class="waves-effect">Files</a></li>
+
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a href="/content-docs" class="waves-effect"><i class="material-icons">article</i>Content Guide</a></li>
+  </ul>
+
+  <!-- Main Content -->
+  <main>
+    <a href="#" data-target="slide-out" class="sidenav-trigger btn-flat hide-on-large-only"><i
+        class="material-icons">menu</i></a>
+
+    <section id="intro">
+      <h2 class="white-text">Media API Guide</h2>
+      <p class="flow-text grey-text text-lighten-1">
+        Endpoints for managing <strong>Videos, Photo Albums, and Files</strong>.
+      </p>
+    </section>
+
+    <!-- VIDEOS SECTION -->
+    <section id="videos">
+      <h4 class="teal-text text-lighten-2">Videos</h4>
+
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method get">GET</span> <span class="url">/api/videos</span>
+          <p class="grey-text text-lighten-1" style="margin-top: 10px;">List all videos (Paginated).</p>
+        </div>
+      </div>
+
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method post">POST</span> <span class="url">/api/videos</span>
+          <p class="grey-text text-lighten-1" style="margin-top: 10px;">Create Video. Supports File Upload or External
+            URL.</p>
+        </div>
+      </div>
+
+      <div class="">
+        <ul class="tabs tabs-transparent" style="background-color: #1e1e1e;">
+          <li class="tab col s3"><a class="active" href="#vid-params">Payload (FormData)</a></li>
+        </ul>
+        <div id="vid-params" class="col s12 card-panel-dark p-4">
+          <table class="highlight responsive-table">
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Type</th>
+                <th>Required</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="blue-text text-lighten-2">title</td>
+                <td class="type-col">String</td>
+                <td class="required">Yes</td>
+                <td>Video Title.</td>
+              </tr>
+              <tr>
+                <td class="blue-text text-lighten-2">videoType</td>
+                <td class="type-col">String</td>
+                <td class="required">Yes</td>
+                <td>'file' or 'url'.</td>
+              </tr>
+              <tr>
+                <td class="blue-text text-lighten-2">videoFile</td>
+                <td class="type-col">File</td>
+                <td class="grey-text">Cond</td>
+                <td>Required if type='file'.</td>
+              </tr>
+              <tr>
+                <td class="blue-text text-lighten-2">videoUrl</td>
+                <td class="type-col">String</td>
+                <td class="grey-text">Cond</td>
+                <td>Required if type='url'.</td>
+              </tr>
+              <tr>
+                <td class="blue-text text-lighten-2">category</td>
+                <td class="type-col">ID</td>
+                <td class="required">Yes</td>
+                <td>Category Object ID.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ALBUMS SECTION -->
+    <section id="albums">
+      <h4 class="orange-text text-lighten-2">Photo Albums</h4>
+
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method get">GET</span> <span class="url">/api/albums</span>
+        </div>
+      </div>
+
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method post">POST</span> <span class="url">/api/albums</span>
+          <p class="grey-text text-lighten-1" style="margin-top: 10px;">Create Album with multiple images.</p>
+        </div>
+      </div>
+
+      <div class="">
+        <ul class="tabs tabs-transparent" style="background-color: #1e1e1e;">
+          <li class="tab col s3"><a class="active" href="#alb-params">Payload (FormData)</a></li>
+        </ul>
+        <div id="alb-params" class="col s12 card-panel-dark p-4">
+          <table class="highlight responsive-table">
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Type</th>
+                <th>Required</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="blue-text text-lighten-2">title</td>
+                <td class="type-col">String</td>
+                <td class="required">Yes</td>
+                <td>Album Title.</td>
+              </tr>
+              <tr>
+                <td class="blue-text text-lighten-2">images</td>
+                <td class="type-col">Files[]</td>
+                <td class="required">Yes</td>
+                <td>Multiple images (Max 20).</td>
+              </tr>
+              <tr>
+                <td class="blue-text text-lighten-2">category</td>
+                <td class="type-col">ID</td>
+                <td class="required">Yes</td>
+                <td>Category Object ID.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- FILES SECTION -->
+    <section id="files">
+      <h4 class="purple-text text-lighten-2">Files (Repository)</h4>
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method get">GET</span> <span class="url">/api/files</span>
+        </div>
+      </div>
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method post">POST</span> <span class="url">/api/files</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.Sidenav.init(document.querySelectorAll('.sidenav'));
+      M.Tabs.init(document.querySelectorAll('.tabs'));
+    });
+  </script>
+</body>
+
+</html>

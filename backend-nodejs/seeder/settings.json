@@ -1,0 +1,12 @@
+[
+  {"key":"site_title","value":"Multaqana Portal","category":"General","isPublic":true,"description":"The main title of the website."},
+  {"key":"maintenance_mode","value":false,"category":"System","isPublic":true,"description":"If true, site shows maintenance page."},
+  {"key":"contact_email","value":"support@multaqana.com","category":"General","isPublic":true,"description":"Public contact email."},
+  {"key":"max_upload_size","value":10485760,"category":"System","isPublic":false,"description":"Max file usage in bytes (10MB)."},
+  {"key":"features_enabled","value":{"news":true,"chat":false,"gallery":true},"category":"Features","isPublic":true,"description":"Toggle features on/off."},
+  {"key":"site_logo","value":"","category":"Appearance","isPublic":true,"description":"Site logo URL or path (e.g. /img/settings/logo.png)."},
+  {"key":"favicon","value":"","category":"Appearance","isPublic":true,"description":"Favicon URL or path."},
+  {"key":"allow_register","value":true,"category":"General","isPublic":true,"description":"If false, registration is disabled and signup redirects to 404."},
+  {"key":"timezone","value":"Asia/Dubai","category":"General","isPublic":true,"description":"Default timezone (e.g. Asia/Dubai)."},
+  {"key":"default_role","value":"user","category":"System","isPublic":false,"description":"Default role slug for new registrations (display only; backend uses Role.isDefault)."}
+]

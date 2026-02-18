@@ -1,0 +1,86 @@
+[
+    {
+        "_id": "5f8d0d55b54764421b7156c7",
+        "title": "Technology News",
+        "description": "Tech Updates",
+        "module": "news",
+        "active": true
+    },
+    {
+        "_id": "5f8d0d55b54764421b7156c8",
+        "title": "Company Events",
+        "description": "Internal Events",
+        "module": "event",
+        "active": true
+    },
+    {
+        "_id": "5f8d0d55b54764421b7156c9",
+        "title": "Help & Support",
+        "description": "General Help",
+        "module": "faq",
+        "active": true
+    },
+    {
+        "_id": "5f8d0d55b54764421b7156f1",
+        "title": "HR Announcements",
+        "description": "HR News",
+        "module": "news",
+        "active": true
+    },
+    {
+        "_id": "5f8d0d55b54764421b7156f2",
+        "title": "General FAQs",
+        "description": "Common Questions",
+        "module": "faq",
+        "active": true
+    },
+    {
+        "_id": "5f8d0d55b54764421b7156f3",
+        "title": "Policies",
+        "description": "Company Policies",
+        "module": "magazine",
+        "active": true
+    },
+    {
+        "_id": "5f8d0d55b54764421b7156f4",
+        "title": "Tutorials",
+        "description": "Learning Videos",
+        "module": "video",
+        "active": true
+    },
+    {
+        "_id": "5f8d0d55b54764421b7156f5",
+        "title": "Annual Reports",
+        "description": "Yearly data",
+        "module": "magazine",
+        "active": true
+    },
+    {
+        "_id": "5f8d0d55b54764421b7156f6",
+        "title": "Office Life",
+        "description": "Fun photos",
+        "module": "album",
+        "active": true
+    },
+    {
+        "_id": "5f8d0d55b54764421b7156f7",
+        "title": "Safety",
+        "description": "Safety procedures",
+        "module": "video",
+        "active": true
+    },
+    {
+        "_id": "5f8d0d55b54764421b7156f8",
+        "title": "IT Updates",
+        "description": "System changes",
+        "module": "news",
+        "active": true
+    },
+    {
+        "_id": "5f8d0d55b54764421b7156f9",
+        "title": "Wellness",
+        "description": "Health tips",
+        "module": "news",
+        "active": true
+    }
+]

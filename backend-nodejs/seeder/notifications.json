@@ -1,0 +1,23 @@
+[
+  {
+    "user": "65b2a1c9e8b1a3d9f1c8e001",
+    "title": "Welcome to Multaqana",
+    "description": "Thanks for joining our portal.",
+    "category": "System",
+    "isRead": false,
+    "data": {
+      "action": "welcome"
+    }
+  },
+  {
+    "user": "65b2a1c9e8b1a3d9f1c8e002",
+    "title": "Leave Approved",
+    "description": "Your leave request for March 5th has been approved.",
+    "category": "Alert",
+    "isRead": true,
+    "link": "/leaves",
+    "data": {
+      "leaveId": "777"
+    }
+  }
+]

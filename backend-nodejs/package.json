@@ -1,0 +1,54 @@
+{
+  "name": "backend-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "cross-env NODE_ENV=test jest --testTimeout=30000 --detectOpenHandles --forceExit",
+    "test:quick": "cross-env NODE_ENV=test jest --testTimeout=30000 --detectOpenHandles --forceExit --testPathIgnorePatterns=tests/auth.test.js",
+    "test:auth": "cross-env NODE_ENV=test jest --testTimeout=30000 --detectOpenHandles --forceExit tests/auth.test.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "data:import": "npm run data:destroy && node seeder/seeder.js -i",
+    "data:destroy": "node seeder/seeder.js -d",
+    "data:seed-roles": "node seeder/seedRolesOnly.js",
+    "data:migrate-roles": "node seeder/migrateRoles.js",
+    "data:seed-settings": "node seeder/seedSettingsDefaults.js",
+    "data:seed-employee": "node seeder/seedEmployeeRole.js",
+    "data:seed-all": "npm run data:seed-roles && npm run data:seed-employee && npm run data:seed-settings",
+    "data:upgrade-admin": "node seeder/upgradeUserToAdmin.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^4.19.2",
+    "express-rate-limit": "^8.2.1",
+    "express-validator": "^7.3.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.2.0",
+    "multer": "^2.0.2",
+    "nodemailer": "^7.0.13",
+    "sharp": "^0.34.5",
+    "slugify": "^1.6.6",
+    "socket.io": "^4.8.3",
+    "uuid": "^13.0.0",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "jest": "^30.2.0",
+    "mongodb-memory-server": "^11.0.1",
+    "nodemon": "^3.1.11",
+    "supertest": "^7.2.2"
+  }
+}

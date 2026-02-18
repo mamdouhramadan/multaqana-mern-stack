@@ -1,0 +1,238 @@
+{
+  "common": {
+    "search": "بحث",
+    "save": "حفظ التغييرات",
+    "cancel": "إلغاء",
+    "logout": "تسجيل الخروج",
+    "profile": "الملف الشخصي",
+    "loading": "جاري التحميل...",
+    "saving": "جاري الحفظ...",
+    "success": "نجح",
+    "error": "خطأ",
+    "close": "إغلاق",
+    "submit": "إرسال",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "add": "إضافة",
+    "addNew": "إضافة جديد",
+    "back": "رجوع",
+    "actions": "الإجراءات",
+    "noResults": "لا توجد نتائج",
+    "confirmDelete": "هل أنت متأكد من حذف {{item}}؟",
+    "deleteSuccess": "تم حذف {{item}} بنجاح",
+    "deleteError": "فشل حذف {{item}}",
+    "loadingError": "خطأ في تحميل {{item}}"
+  },
+  "admin": {
+    "title": "لوحة الإدارة",
+    "dashboard": {
+      "title": "لوحة تحكم الإدارة",
+      "welcome": "مرحباً بعودتك!",
+      "loggedInAs": "تم تسجيل الدخول بواسطة",
+      "quickOverview": "نظرة عامة سريعة",
+      "totalItems": "إجمالي العناصر",
+      "modules": {
+        "applications": "التطبيقات",
+        "employees": "الموظفون",
+        "videos": "الفيديوهات",
+        "photos": "الصور",
+        "magazines": "المجلات",
+        "events": "الفعاليات",
+        "faqs": "الأسئلة الشائعة",
+        "files": "الملفات",
+        "news": "الأخبار"
+      },
+      "stats": {
+        "newsArticles": "مقالات الأخبار"
+      }
+    },
+    "sidebar": {
+      "dashboard": "لوحة التحكم",
+      "applications": "التطبيقات",
+      "roles": "الأدوار",
+      "employees": "الموظفون",
+      "users": "المستخدمون",
+      "videos": "الفيديوهات",
+      "photos": "الصور",
+      "magazines": "المجلات",
+      "events": "الفعاليات",
+      "faqs": "الأسئلة الشائعة",
+      "files": "الملفات",
+      "news": "الأخبار",
+      "settings": "الإعدادات",
+      "groups": {
+        "content": "المحتوى",
+        "users": "المستخدمون والموظفون",
+        "system": "النظام"
+      }
+    },
+    "header": {
+      "searchPlaceholder": "بحث..."
+    },
+    "lists": {
+      "searchPlaceholder": "بحث في {{module}}...",
+      "noItemsFound": "لا توجد {{module}}",
+      "tableHeaders": {
+        "image": "الصورة",
+        "name": "الاسم",
+        "title": "العنوان",
+        "category": "الفئة",
+        "actions": "الإجراءات",
+        "status": "الحالة",
+        "date": "التاريخ"
+      }
+    },
+    "profile": {
+      "title": "ملفي الشخصي",
+      "description": "إدارة معلوماتك الشخصية وتفضيلاتك",
+      "personalDetails": "التفاصيل الشخصية",
+      "profilePicture": "الصورة الشخصية",
+      "uploadPhoto": "تحميل صورة",
+      "looksGood": "تبدو جيدة!",
+      "recommendedSize": "يُنصح بحجم 400×400 بكسل أو أكبر",
+      "fields": {
+        "name": "الاسم الكامل",
+        "email": "البريد الإلكتروني",
+        "role": "الدور الوظيفي",
+        "bio": "نبذة تعريفية",
+        "namePlaceholder": "أدخل اسمك",
+        "emailPlaceholder": "name@example.com",
+        "bioPlaceholder": "أخبرنا قليلاً عن نفسك...",
+        "maxCharacters": "الحد الأقصى 500 حرف"
+      },
+      "validation": {
+        "nameRequired": "يجب أن يكون الاسم حرفين على الأقل",
+        "emailInvalid": "يرجى إدخال بريد إلكتروني صالح",
+        "bioTooLong": "يجب أن تكون النبذة أقل من 500 حرف"
+      },
+      "messages": {
+        "updateSuccess": "تم تحديث الملف الشخصي بنجاح",
+        "updateError": "فشل تحديث الملف الشخصي",
+        "loadError": "فشل تحميل بيانات الملف الشخصي"
+      }
+    },
+    "forms": {
+      "backTo": "العودة إلى {{module}}",
+      "addNew": "إضافة {{module}} جديد",
+      "edit": "تعديل {{module}}",
+      "publish": "نشر",
+      "saveDraft": "حفظ كمسودة",
+      "published": "منشور",
+      "draft": "مسودة",
+      "status": "الحالة",
+      "createSuccess": "تم إنشاء {{module}} بنجاح",
+      "updateSuccess": "تم تحديث {{module}} بنجاح",
+      "deleteSuccess": "تم حذف {{module}} بنجاح",
+      "saveError": "فشل حفظ {{module}}",
+      "deleteError": "فشل حذف {{module}}",
+      "applications": {
+        "name": "اسم التطبيق",
+        "namePlaceholder": "أدخل اسم التطبيق",
+        "url": "رابط التطبيق",
+        "urlPlaceholder": "https://example.com",
+        "image": "مسار/رابط الصورة",
+        "imagePlaceholder": "/path/to/image.png أو https://...",
+        "category": "الفئة",
+        "categoryPlaceholder": "اختر الفئة"
+      },
+      "employees": {
+        "name": "اسم الموظف",
+        "namePlaceholder": "أدخل اسم الموظف",
+        "position": "المنصب",
+        "positionPlaceholder": "أدخل المنصب",
+        "department": "القسم",
+        "departmentPlaceholder": "اختر القسم",
+        "email": "البريد الإلكتروني",
+        "emailPlaceholder": "employee@example.com",
+        "phone": "الهاتف",
+        "phonePlaceholder": "+1234567890",
+        "image": "الصورة الشخصية"
+      },
+      "videos": {
+        "title": "عنوان الفيديو",
+        "titlePlaceholder": "أدخل عنوان الفيديو",
+        "url": "رابط الفيديو",
+        "urlPlaceholder": "https://youtube.com/...",
+        "thumbnail": "صورة مصغرة",
+        "description": "الوصف",
+        "descriptionPlaceholder": "أدخل وصف الفيديو"
+      },
+      "photos": {
+        "title": "عنوان الصورة",
+        "titlePlaceholder": "أدخل عنوان الصورة",
+        "image": "الصورة",
+        "description": "الوصف",
+        "descriptionPlaceholder": "أدخل وصف الصورة",
+        "category": "الفئة"
+      },
+      "magazines": {
+        "title": "عنوان المجلة",
+        "titlePlaceholder": "أدخل عنوان المجلة",
+        "issue": "رقم الإصدار",
+        "issuePlaceholder": "مثال: الإصدار #12",
+        "coverImage": "صورة الغلاف",
+        "pdfUrl": "رابط PDF",
+        "pdfPlaceholder": "https://...",
+        "publishDate": "تاريخ النشر"
+      },
+      "events": {
+        "title": "عنوان الفعالية",
+        "titlePlaceholder": "أدخل عنوان الفعالية",
+        "date": "تاريخ الفعالية",
+        "time": "وقت الفعالية",
+        "location": "الموقع",
+        "locationPlaceholder": "أدخل الموقع",
+        "description": "الوصف",
+        "descriptionPlaceholder": "أدخل وصف الفعالية",
+        "image": "صورة الفعالية"
+      },
+      "faqs": {
+        "question": "السؤال",
+        "questionPlaceholder": "أدخل السؤال",
+        "answer": "الإجابة",
+        "answerPlaceholder": "أدخل الإجابة",
+        "category": "الفئة",
+        "categoryPlaceholder": "اختر الفئة"
+      },
+      "files": {
+        "name": "اسم الملف",
+        "namePlaceholder": "أدخل اسم الملف",
+        "url": "رابط الملف",
+        "urlPlaceholder": "https://...",
+        "type": "نوع الملف",
+        "typePlaceholder": "مثال: PDF، DOC، إلخ.",
+        "size": "حجم الملف",
+        "description": "الوصف"
+      },
+      "news": {
+        "title": "عنوان الخبر",
+        "titlePlaceholder": "أدخل عنوان الخبر",
+        "content": "المحتوى",
+        "contentPlaceholder": "أدخل محتوى الخبر",
+        "image": "الصورة المميزة",
+        "publishDate": "تاريخ النشر",
+        "author": "الكاتب",
+        "authorPlaceholder": "أدخل اسم الكاتب",
+        "category": "الفئة"
+      }
+    }
+  },
+  "language": {
+    "switchTo": "تبديل اللغة",
+    "english": "الإنجليزية",
+    "arabic": "العربية",
+    "current": "الحالية: {{language}}"
+  },
+  "auth": {
+    "login": "تسجيل الدخول",
+    "register": "التسجيل",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "rememberMe": "تذكرني"
+  },
+  "tooltips": {
+    "edit": "تعديل",
+    "delete": "حذف",
+    "view": "عرض",
+    "add": "إضافة عنصر جديد"
+  }
+}

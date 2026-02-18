@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "5f8d0d55b54764421b7156c1",
+    "title": "IT Department",
+    "description": "Information Technology",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156c2",
+    "title": "HR Department",
+    "description": "Human Resources",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156d1",
+    "title": "Finance",
+    "description": "Finance & Accounting",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156d2",
+    "title": "Marketing",
+    "description": "Marketing & Sales",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156d3",
+    "title": "Operations",
+    "description": "Business Operations",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156d4",
+    "title": "Legal",
+    "description": "Legal Affairs",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156d5",
+    "title": "R&D",
+    "description": "Research and Development",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156d6",
+    "title": "Customer Support",
+    "description": "Client Services",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156d7",
+    "title": "Logistics",
+    "description": "Supply Chain",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156d8",
+    "title": "Procurement",
+    "description": "Purchasing",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156d9",
+    "title": "Compliance",
+    "description": "Regulatory Compliance",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156da",
+    "title": "Facilities",
+    "description": "Facilities Management",
+    "active": true
+  }
+]

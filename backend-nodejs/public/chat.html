@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-time Chat Demo</title>
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      height: 100vh;
+      margin: 0;
+      background: #f0f2f5;
+    }
+
+    .sidebar {
+      width: 300px;
+      background: white;
+      border-right: 1px solid #ddd;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .chat-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      background: #fff;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .messages {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      background: #e5ddd5;
+    }
+
+    .input-area {
+      background: #f0f0f0;
+      padding: 10px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .message {
+      margin-bottom: 10px;
+      max-width: 60%;
+      padding: 10px;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .message.sent {
+      background: #dcf8c6;
+      margin-left: auto;
+      border-bottom-right-radius: 0;
+    }
+
+    .message.received {
+      background: white;
+      margin-right: auto;
+      border-bottom-left-radius: 0;
+    }
+
+    .message-meta {
+      font-size: 0.7em;
+      color: #888;
+      text-align: right;
+      margin-top: 5px;
+    }
+
+    input,
+    button {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    input {
+      flex: 1;
+    }
+
+    button {
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    button.danger {
+      background: #dc3545;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.8em;
+      margin-top: 5px;
+    }
+
+    .chat-item {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+    }
+
+    .chat-item:hover {
+      background: #f9f9f9;
+    }
+
+    .chat-item.active {
+      background: #e3f2fd;
+    }
+
+    /* React Code Snippet Style */
+    pre {
+      background: #282c34;
+      color: #abb2bf;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Demo UI -->
+  <div class="sidebar">
+    <h2>Multaqana Chat</h2>
+    <div>
+      <input type="text" id="tokenInput" placeholder="Paste your JWT Token here..."
+        style="width: 100%; margin-bottom: 10px;">
+      <button onclick="loginAndConnect()">Connect</button>
+    </div>
+    <hr>
+    <h3>Active Chats</h3>
+    <div id="conversationList">
+      <!-- Conversations go here -->
+    </div>
+    <button onclick="document.getElementById('newChatForm').classList.toggle('hidden')">+ New Chat</button>
+    <div id="newChatForm" class="hidden" style="margin-top: 10px;">
+      <input type="text" id="recipientId" placeholder="Recipient ID">
+      <button onclick="createConversation()">Start</button>
+    </div>
+  </div>
+
+  <div class="chat-area">
+    <div class="header">
+      <div>
+        <h3 id="chatTitle" style="margin: 0;">Select a chat</h3>
+        <small id="typingIndicator" style="color: #666;"></small>
+      </div>
+      <div style="display: flex; gap: 10px; align-items: center;">
+        <button id="muteBtn" class="hidden danger" onclick="toggleMute()">Mute User</button>
+        <span id="connectionStatus" style="color: red;">Disconnected</span>
+      </div>
+    </div>
+    <div class="messages" id="messagesContainer">
+      <!-- Messages go here -->
+    </div>
+    <div class="input-area">
+      <input type="text" id="messageInput" placeholder="Type a message..." onkeypress="handleTyping()">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+        const API_URL = 'http://localhost:5000/api';
+        let socket;
+        let token = '';
+        let myId = ''; // We'll parse this from token if possible, or fetch /me
+        let currentConversationId = null;
+        let currentRecipientId = null; // Track who we are talking to for mute logic
+        let typingTimeout;
+
+        async function loginAndConnect() {
+            token = document.getElementById('tokenInput').value;
+            if(!token) return alert("Please paste a JWT Token!");
+
+            // 1. Fetch My Profile to get ID
+            try {
+                const res = await fetch(`${API_URL}/users/me`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const data = await res.json();
+                if(!data.success) throw new Error(data.message);
+                
+                myId = data.data._id;
+                console.log("Logged in as:", data.data.username);
+            } catch (err) {
+                return alert("Login failed: " + err.message);
+            }
+
+            // 2. Connect Socket
+            socket = io('http://localhost:5000', {
+               auth: { token } // Ensure your server supports this if using middleware, otherwise default is fine for public
+            });
+
+            socket.on('connect', () => {
+                document.getElementById('connectionStatus').textContent = "Connected";
+                document.getElementById('connectionStatus').style.color = "green";
+                
+                // Authenticate Socket (Join my personal room)
+                socket.emit('join_room', myId);
+                
+                // Fetch my conversations
+                fetchConversations();
+            });
+
+            socket.on('receive_message', (msg) => {
+                if (msg.conversationId === currentConversationId) {
+                    appendMessage(msg);
+                    scrollToBottom();
+                } else {
+                    // Update unread count in UI (simplified)
+                    fetchConversations(); // Refresh list to show unread
+                    // alert(`New message from ${msg.sender.username}`);
+                }
+            });
+            
+            // ERROR HANDLING
+            socket.on('error', (err) => {
+                alert(`Socket Error: ${err.message}`);
+            });
+
+            socket.on('typing', ({ username }) => {
+                document.getElementById('typingIndicator').textContent = `${username} is typing...`;
+            });
+
+            socket.on('stop_typing', () => {
+                document.getElementById('typingIndicator').textContent = "";
+            });
+        }
+
+        async function fetchConversations() {
+            try {
+                const res = await fetch(`${API_URL}/chat/conversations?limit=20`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const json = await res.json();
+                
+                const list = document.getElementById('conversationList');
+                list.innerHTML = '';
+                
+                json.data.conversations.forEach(conv => {
+                    const otherUser = conv.participants.find(p => p._id !== myId) || conv.participants[0];
+                    const div = document.createElement('div');
+                    div.className = `chat-item ${currentConversationId === conv._id ? 'active' : ''}`;
+                    div.innerHTML = `
+                        <strong>${otherUser.username}</strong>
+                        ${conv.unreadCount > 0 ? `<span style="background:red; color:white; border-radius:50%; padding:2px 6px; font-size:10px;">${conv.unreadCount}</span>` : ''}
+                        <br><small>${conv.lastMessage ? (conv.lastMessage.content || 'Attachment') : 'No messages'}</small>
+                    `;
+                    div.onclick = () => selectChat(conv._id, otherUser);
+                    list.appendChild(div);
+                });
+            } catch (err) {
+                console.error("Failed to load conversations", err);
+            }
+        }
+
+        async function selectChat(convId, otherUser) {
+            currentConversationId = convId;
+            currentRecipientId = otherUser._id;
+            
+            document.getElementById('chatTitle').textContent = otherUser.username;
+            document.getElementById('muteBtn').classList.remove('hidden');
+            
+            // Join Chat Room
+            socket.emit('join_chat', convId);
+
+            // Fetch History
+            try {
+                const res = await fetch(`${API_URL}/chat/messages/${convId}?limit=50`, {
+                     headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const json = await res.json();
+                
+                const container = document.getElementById('messagesContainer');
+                container.innerHTML = '';
+                
+                // Messages come newest first, reverse for display
+                json.data.messages.reverse().forEach(msg => appendMessage(msg));
+                scrollToBottom();
+                
+                // Refresh list to clear unread locally
+                fetchConversations(); 
+                
+            } catch(err) {
+                alert("Failed to load messages");
+            }
+        }
+        
+        async function createConversation() {
+            const recipientId = document.getElementById('recipientId').value;
+            if(!recipientId) return alert("Enter ID");
+            
+            try {
+                const res = await fetch(`${API_URL}/chat/conversations`, {
+                    method: 'POST',
+                    headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ recipientId })
+                });
+                const json = await res.json();
+                if(json.success) {
+                    alert("Chat started!");
+                    fetchConversations();
+                } else {
+                    alert(json.message);
+                }
+            } catch(err) { alert(err.message); }
+        }
+        
+        async function toggleMute() {
+            if(!currentRecipientId) return;
+            try {
+                const res = await fetch(`${API_URL}/chat/mute/${currentRecipientId}`, {
+                    method: 'PATCH',
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const json = await res.json();
+                alert(json.message);
+            } catch(err) { alert(err.message); }
+        }
+
+        function sendMessage() {
+            const content = document.getElementById('messageInput').value;
+            if(!content) return;
+
+            // Emit to server
+            socket.emit('send_message', {
+                conversationId: currentConversationId,
+                senderId: myId,
+                content: content,
+                attachments: [] 
+            });
+
+            document.getElementById('messageInput').value = '';
+        }
+
+        function appendMessage(msg) {
+            const div = document.createElement('div');
+            // Check ID match (handle populated vs string ID)
+            const senderId = msg.sender._id || msg.sender;
+            const isMe = senderId === myId;
+            
+            div.className = `message ${isMe ? 'sent' : 'received'}`;
+            // Display username if received
+            const senderName = isMe ? 'You' : (msg.sender.username || 'User');
+            
+            div.innerHTML = `
+                <div style="font-size:0.8em; font-weight:bold; margin-bottom:2px;">${senderName}</div>
+                ${msg.content || '<i>Attachment</i>'}
+                <div class="message-meta">${new Date(msg.createdAt || Date.now()).toLocaleTimeString()}</div>
+            `;
+            document.getElementById('messagesContainer').appendChild(div);
+        }
+
+        function handleTyping() {
+            if(!currentConversationId) return;
+            // Access username from somewhere... simplest is hardcode 'User' or store my username
+            socket.emit('typing', { conversationId: currentConversationId, userId: myId, username: "Typing..." });
+            
+            clearTimeout(typingTimeout);
+            typingTimeout = setTimeout(() => {
+                socket.emit('stop_typing', { conversationId: currentConversationId, userId: myId });
+            }, 1000);
+        }
+
+        function scrollToBottom() {
+            const container = document.getElementById('messagesContainer');
+            container.scrollTop = container.scrollHeight;
+        }
+  </script>
+
+  <!-- React Integration Documentation -->
+  <div style="background: #333; color: #fff; padding: 20px; font-family: monospace;">
+    <h3>React Integration Guide</h3>
+    <p>To use this in your React Native / Next.js app:</p>
+    <pre>
+import { useEffect, useState } from 'react';
+import io from 'socket.io-client';
+
+// Use same socket instance
+const socket = io('http://localhost:5000');
+
+export const useChat = (userId, conversationId) => {
+    const [messages, setMessages] = useState([]);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        // 1. Connect & Join
+        socket.emit('join_room', userId);
+        if(conversationId) socket.emit('join_chat', conversationId);
+
+        // 2. Listeners
+        socket.on('receive_message', (newMessage) => {
+            setMessages((prev) => [...prev, newMessage]);
+        });
+        
+        socket.on('error', (err) => {
+            setError(err.message);
+        });
+
+        // Cleanup
+        return () => {
+            socket.off('receive_message');
+            socket.off('error');
+            if(conversationId) socket.emit('leave_chat', conversationId);
+        };
+    }, [conversationId]);
+
+    const sendMessage = (content) => {
+        socket.emit('send_message', { conversationId, senderId: userId, content });
+    };
+
+    return { messages, sendMessage, error };
+};
+        </pre>
+  </div>
+
+</body>
+
+</html>

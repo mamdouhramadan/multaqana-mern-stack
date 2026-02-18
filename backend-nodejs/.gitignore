@@ -1,0 +1,13 @@
+node_modules
+.env
+node_modules/
+.env
+
+.claude
+.claude/*
+.cursor
+.cursor/*
+.agent/
+.agent/*
+.agents
+.agents/*

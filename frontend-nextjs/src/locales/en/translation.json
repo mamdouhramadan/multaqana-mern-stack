@@ -1,0 +1,350 @@
+{
+  "common": {
+    "search": "Search",
+    "save": "Save Changes",
+    "cancel": "Cancel",
+    "logout": "Logout",
+    "profile": "Profile",
+    "loading": "Loading...",
+    "saving": "Saving...",
+    "success": "Success",
+    "error": "Error",
+    "close": "Close",
+    "submit": "Submit",
+    "edit": "Edit",
+    "delete": "Delete",
+    "add": "Add",
+    "addNew": "Add New",
+    "back": "Back",
+    "actions": "Actions",
+    "noResults": "No results found",
+    "confirmDelete": "Are you sure you want to delete this {{item}}?",
+    "deleteSuccess": "{{item}} deleted successfully",
+    "deleteError": "Failed to delete {{item}}",
+    "loadingError": "Error loading {{item}}",
+    "viewAll": "View all",
+    "viewDetails": "View details",
+    "signIn": "Sign in"
+  },
+  "sidebar": {
+    "mainMenu": "Main Menu",
+    "featuredApps": "Featured Apps",
+    "search": "Search",
+    "magazines": "Magazines",
+    "videos": "Videos",
+    "photos": "Photos",
+    "employees": "Employees",
+    "eventsCalendar": "Events Calendar",
+    "applications": "Applications",
+    "language": "Language",
+    "faqs": "FAQs",
+    "importantFiles": "Important Files",
+    "attendance": "My Attendance",
+    "contactUs": "Contact Us",
+    "followUs": "Follow Us"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "THE UNITED ARAB EMIRATES AUTHORITY ON",
+      "title": "Fostering transparency & investor confidence"
+    },
+    "cards": {
+      "reports": {
+        "title": "Reports",
+        "desc": "Official reports and transparency"
+      },
+      "chats": {
+        "title": "Chats",
+        "desc": "Connect and discuss"
+      },
+      "news": {
+        "title": "News",
+        "desc": "Latest news and updates"
+      },
+      "contact": {
+        "title": "Contact",
+        "desc": "Get in touch with us"
+      },
+      "services": {
+        "title": "Services",
+        "desc": "Investor support and guidance"
+      }
+    },
+    "latestNews": "Latest News",
+    "recentFiles": "Recent Files",
+    "magazines": "Magazines",
+    "ourTeam": "Our Team",
+    "upcomingEvents": "Upcoming Events",
+    "albums": "Photo Albums",
+    "albumsCards": {
+      "card1": "Unlock Your Creative Flow",
+      "card2": "Design Your Digital Future",
+      "card3": "Build with Passion, Ship with Pride",
+      "card4": "Think Big, Code Smart"
+    },
+    "cta": {
+      "orgChart": {
+        "title": "Explore",
+        "titleHighlight": "Our Org Chart",
+        "description": "Explore Our Org Chart",
+        "linkText": "View the Org Chart"
+      },
+      "contact": {
+        "title": "Contact Us",
+        "description": "Need help? Get in touch with our support team.",
+        "buttonText": "Contact Us"
+      }
+    },
+    "explore": {
+      "title": "Explore",
+      "magazines": {
+        "title": "Magazines",
+        "desc": "Browse our publications and reports."
+      },
+      "videos": {
+        "title": "Videos",
+        "desc": "Watch videos and media content."
+      },
+      "photoAlbums": {
+        "title": "Photo Albums",
+        "desc": "Explore our photo galleries."
+      }
+    }
+  },
+  "header": {
+    "search": "Search",
+    "searchPlaceholder": "Search..."
+  },
+  "footer": {
+    "copyright": "© {{year}} My App. All rights reserved."
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "dashboard": {
+      "title": "Admin Dashboard",
+      "welcome": "Welcome back!",
+      "loggedInAs": "Logged in as",
+      "quickOverview": "Quick Overview",
+      "totalItems": "Total Items",
+      "modules": {
+        "applications": "Applications",
+        "employees": "Employees",
+        "roles": "Roles & Permissions",
+        "users": "Users",
+        "videos": "Videos",
+        "photos": "Photos",
+        "magazines": "Magazines",
+        "events": "Events",
+        "faqs": "FAQs",
+        "files": "Files",
+        "news": "News"
+      },
+      "stats": {
+        "newsArticles": "News Articles"
+      },
+      "sidebar": {
+        "dashboard": "Dashboard",
+        "applications": "Applications",
+        "roles": "Roles & Permissions",
+        "employees": "Employees",
+        "users": "Users",
+        "videos": "Videos",
+        "photos": "Photos",
+        "magazines": "Magazines",
+        "events": "Events",
+        "faqs": "FAQs",
+        "files": "Files",
+        "news": "News",
+        "settings": "Settings",
+        "groups": {
+          "content": "Content",
+          "users": "Users & Employees",
+          "system": "System"
+        }
+      }
+    },
+    "sidebar": {
+      "dashboard": "Dashboard",
+      "applications": "Applications",
+      "roles": "Roles & Permissions",
+      "employees": "Employees",
+      "users": "Users",
+      "videos": "Videos",
+      "photos": "Photos",
+      "magazines": "Magazines",
+      "events": "Events",
+      "faqs": "FAQs",
+      "files": "Files",
+      "news": "News",
+      "settings": "Settings"
+    },
+    "header": {
+      "searchPlaceholder": "Search..."
+    },
+    "lists": {
+      "searchPlaceholder": "Search {{module}}...",
+      "noItemsFound": "No {{module}} found",
+      "tableHeaders": {
+        "image": "Image",
+        "name": "Name",
+        "title": "Title",
+        "category": "Category",
+        "actions": "Actions",
+        "status": "Status",
+        "date": "Date"
+      }
+    },
+    "profile": {
+      "title": "My Profile",
+      "description": "Manage your personal information and preferences",
+      "personalDetails": "Personal Details",
+      "profilePicture": "Profile Picture",
+      "uploadPhoto": "Upload a photo",
+      "looksGood": "Looks good!",
+      "recommendedSize": "Recommend 400x400px or larger",
+      "fields": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "role": "Role",
+        "bio": "Bio",
+        "namePlaceholder": "Enter your name",
+        "emailPlaceholder": "name@example.com",
+        "bioPlaceholder": "Tell us a little about yourself...",
+        "maxCharacters": "Max 500 characters"
+      },
+      "validation": {
+        "nameRequired": "Name must be at least 2 characters",
+        "emailInvalid": "Please enter a valid email",
+        "bioTooLong": "Bio must be less than 500 characters"
+      },
+      "messages": {
+        "updateSuccess": "Profile updated successfully",
+        "updateError": "Failed to update profile",
+        "loadError": "Failed to load profile data"
+      }
+    },
+    "forms": {
+      "backTo": "Back to {{module}}",
+      "addNew": "Add New {{module}}",
+      "edit": "Edit {{module}}",
+      "publish": "Publish",
+      "saveDraft": "Save Draft",
+      "published": "Published",
+      "draft": "Draft",
+      "status": "Status",
+      "createSuccess": "{{module}} created successfully",
+      "updateSuccess": "{{module}} updated successfully",
+      "deleteSuccess": "{{module}} deleted successfully",
+      "saveError": "Failed to save {{module}}",
+      "deleteError": "Failed to delete {{module}}",
+      "applications": {
+        "name": "Application Name",
+        "namePlaceholder": "Enter application name",
+        "url": "Application URL",
+        "urlPlaceholder": "https://example.com",
+        "image": "Image Path/URL",
+        "imagePlaceholder": "/path/to/image.png or https://...",
+        "category": "Category",
+        "categoryPlaceholder": "Select category"
+      },
+      "employees": {
+        "name": "Employee Name",
+        "namePlaceholder": "Enter employee name",
+        "position": "Position",
+        "positionPlaceholder": "Enter position",
+        "department": "Department",
+        "departmentPlaceholder": "Select department",
+        "email": "Email",
+        "emailPlaceholder": "employee@example.com",
+        "phone": "Phone",
+        "phonePlaceholder": "+1234567890",
+        "image": "Profile Image"
+      },
+      "videos": {
+        "title": "Video Title",
+        "titlePlaceholder": "Enter video title",
+        "url": "Video URL",
+        "urlPlaceholder": "https://youtube.com/...",
+        "thumbnail": "Thumbnail Image",
+        "description": "Description",
+        "descriptionPlaceholder": "Enter video description"
+      },
+      "photos": {
+        "title": "Photo Title",
+        "titlePlaceholder": "Enter photo title",
+        "image": "Image",
+        "description": "Description",
+        "descriptionPlaceholder": "Enter photo description",
+        "category": "Category"
+      },
+      "magazines": {
+        "title": "Magazine Title",
+        "titlePlaceholder": "Enter magazine title",
+        "issue": "Issue Number",
+        "issuePlaceholder": "e.g., Issue #12",
+        "coverImage": "Cover Image",
+        "pdfUrl": "PDF URL",
+        "pdfPlaceholder": "https://...",
+        "publishDate": "Publish Date"
+      },
+      "events": {
+        "title": "Event Title",
+        "titlePlaceholder": "Enter event title",
+        "date": "Event Date",
+        "time": "Event Time",
+        "location": "Location",
+        "locationPlaceholder": "Enter location",
+        "description": "Description",
+        "descriptionPlaceholder": "Enter event description",
+        "image": "Event Image"
+      },
+      "faqs": {
+        "question": "Question",
+        "questionPlaceholder": "Enter the question",
+        "answer": "Answer",
+        "answerPlaceholder": "Enter the answer",
+        "category": "Category",
+        "categoryPlaceholder": "Select category"
+      },
+      "files": {
+        "name": "File Name",
+        "namePlaceholder": "Enter file name",
+        "url": "File URL",
+        "urlPlaceholder": "https://...",
+        "type": "File Type",
+        "typePlaceholder": "e.g., PDF, DOC, etc.",
+        "size": "File Size",
+        "description": "Description"
+      },
+      "news": {
+        "title": "News Title",
+        "titlePlaceholder": "Enter news title",
+        "content": "Content",
+        "contentPlaceholder": "Enter news content",
+        "image": "Featured Image",
+        "publishDate": "Publish Date",
+        "author": "Author",
+        "authorPlaceholder": "Enter author name",
+        "category": "Category"
+      }
+    }
+  },
+  "language": {
+    "switchTo": "Switch Language",
+    "english": "English",
+    "arabic": "Arabic",
+    "current": "Current: {{language}}"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "forgotPassword": "Forgot Password?",
+    "rememberMe": "Remember Me"
+  },
+  "tooltips": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "add": "Add new item"
+  }
+}

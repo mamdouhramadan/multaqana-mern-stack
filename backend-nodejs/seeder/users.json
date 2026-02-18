@@ -1,0 +1,288 @@
+[
+  {
+    "_id": "5f8d0d55b54764421b7156c5",
+    "username": "adminUser",
+    "email": "admin@example.com",
+    "password": "$2a$10$YourHashedPasswordHereOrPlainTextIfSeederHashesIt",
+    "roles": {
+      "User": 2001,
+      "Admin": 5150
+    },
+    "phoneNumber": "01012345678",
+    "age": 30,
+    "address": {
+      "country": "Egypt",
+      "city": "Cairo",
+      "street": "Main St"
+    },
+    "department": "5f8d0d55b54764421b7156c1",
+    "position": "5f8d0d55b54764421b7156c3",
+    "active": true,
+    "joiningDate": "2020-01-01T00:00:00.000Z",
+    "jobTitle": "System Administrator",
+    "contractType": "Full-time",
+    "dateOfBirth": "1994-01-01T00:00:00.000Z",
+    "gender": "Male",
+    "nationality": "Egyptian",
+    "personalEmail": "admin_personal@example.com",
+    "language": "en"
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156c6",
+    "username": "normalUser",
+    "email": "user@example.com",
+    "password": "$2a$10$YourHashedPasswordHereOrPlainTextIfSeederHashesIt",
+    "roles": {
+      "User": 2001
+    },
+    "phoneNumber": "01212345678",
+    "age": 25,
+    "address": {
+      "country": "Egypt",
+      "city": "Giza",
+      "street": "Nile St"
+    },
+    "department": "5f8d0d55b54764421b7156c2",
+    "position": "5f8d0d55b54764421b7156c4",
+    "active": true,
+    "joiningDate": "2021-03-15T00:00:00.000Z",
+    "jobTitle": "Software Developer",
+    "contractType": "Full-time",
+    "dateOfBirth": "1999-05-20T00:00:00.000Z",
+    "gender": "Female",
+    "nationality": "Egyptian",
+    "personalEmail": "user_personal@example.com",
+    "language": "ar"
+  },
+  {
+    "_id": "5f8d0d55b54764421b715701",
+    "username": "johnDoe",
+    "email": "john@example.com",
+    "password": "password",
+    "roles": {
+      "User": 2001
+    },
+    "phoneNumber": "01000000001",
+    "age": 28,
+    "address": {
+      "country": "Egypt",
+      "city": "Alex",
+      "street": "Sea St"
+    },
+    "department": "5f8d0d55b54764421b7156d1",
+    "position": "5f8d0d55b54764421b7156e1",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b715702",
+    "username": "janeSmith",
+    "email": "jane@example.com",
+    "password": "password",
+    "roles": {
+      "User": 2001
+    },
+    "phoneNumber": "01000000002",
+    "age": 29,
+    "address": {
+      "country": "UAE",
+      "city": "Dubai",
+      "street": "SZR"
+    },
+    "department": "5f8d0d55b54764421b7156d2",
+    "position": "5f8d0d55b54764421b7156e2",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b715703",
+    "username": "mikeRoss",
+    "email": "mike@example.com",
+    "password": "password",
+    "roles": {
+      "User": 2001,
+      "Editor": 1984
+    },
+    "phoneNumber": "01000000003",
+    "age": 32,
+    "address": {
+      "country": "KSA",
+      "city": "Riyadh",
+      "street": "King Fahd Rd"
+    },
+    "department": "5f8d0d55b54764421b7156d4",
+    "position": "5f8d0d55b54764421b7156e4",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b715704",
+    "username": "rachelZane",
+    "email": "rachel@example.com",
+    "password": "password",
+    "roles": {
+      "User": 2001
+    },
+    "phoneNumber": "01000000004",
+    "age": 27,
+    "address": {
+      "country": "Egypt",
+      "city": "Cairo",
+      "street": "Zamalek"
+    },
+    "department": "5f8d0d55b54764421b7156d4",
+    "position": "5f8d0d55b54764421b7156e4",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b715705",
+    "username": "harveySpecter",
+    "email": "harvey@example.com",
+    "password": "password",
+    "roles": {
+      "User": 2001,
+      "Admin": 5150
+    },
+    "phoneNumber": "01000000005",
+    "age": 40,
+    "address": {
+      "country": "USA",
+      "city": "NY",
+      "street": "5th Ave"
+    },
+    "department": "5f8d0d55b54764421b7156d4",
+    "position": "5f8d0d55b54764421b7156e4",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b715706",
+    "username": "donnaPaulsen",
+    "email": "donna@example.com",
+    "password": "password",
+    "roles": {
+      "User": 2001
+    },
+    "phoneNumber": "01000000006",
+    "age": 35,
+    "address": {
+      "country": "USA",
+      "city": "NY",
+      "street": "5th Ave"
+    },
+    "department": "5f8d0d55b54764421b7156d3",
+    "position": "5f8d0d55b54764421b7156e3",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b715707",
+    "username": "louisLitt",
+    "email": "louis@example.com",
+    "password": "password",
+    "roles": {
+      "User": 2001
+    },
+    "phoneNumber": "01000000007",
+    "age": 38,
+    "address": {
+      "country": "USA",
+      "city": "NY",
+      "street": "5th Ave"
+    },
+    "department": "5f8d0d55b54764421b7156d1",
+    "position": "5f8d0d55b54764421b7156e1",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b715708",
+    "username": "jessicaPearson",
+    "email": "jessica@example.com",
+    "password": "password",
+    "roles": {
+      "User": 2001,
+      "Admin": 5150
+    },
+    "phoneNumber": "01000000008",
+    "age": 45,
+    "address": {
+      "country": "USA",
+      "city": "Chicago",
+      "street": "Loop"
+    },
+    "department": "5f8d0d55b54764421b7156d4",
+    "position": "5f8d0d55b54764421b7156e4",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b715709",
+    "username": "katrinaBennett",
+    "email": "katrina@example.com",
+    "password": "password",
+    "roles": {
+      "User": 2001
+    },
+    "phoneNumber": "01000000009",
+    "age": 30,
+    "address": {
+      "country": "USA",
+      "city": "NY",
+      "street": "Wall St"
+    },
+    "department": "5f8d0d55b54764421b7156d4",
+    "position": "5f8d0d55b54764421b7156e4",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b715710",
+    "username": "alexWilliams",
+    "email": "alex@example.com",
+    "password": "password",
+    "roles": {
+      "User": 2001
+    },
+    "phoneNumber": "01000000010",
+    "age": 33,
+    "address": {
+      "country": "UK",
+      "city": "London",
+      "street": "Baker St"
+    },
+    "department": "5f8d0d55b54764421b7156d4",
+    "position": "5f8d0d55b54764421b7156e4",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b715711",
+    "username": "samanthaWheeler",
+    "email": "samantha@example.com",
+    "password": "password",
+    "roles": {
+      "User": 2001
+    },
+    "phoneNumber": "01000000011",
+    "age": 31,
+    "address": {
+      "country": "USA",
+      "city": "LA",
+      "street": "Sunset Blvd"
+    },
+    "department": "5f8d0d55b54764421b7156d4",
+    "position": "5f8d0d55b54764421b7156e4",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b715712",
+    "username": "robertZane",
+    "email": "robert@example.com",
+    "password": "password",
+    "roles": {
+      "User": 2001
+    },
+    "phoneNumber": "01000000012",
+    "age": 55,
+    "address": {
+      "country": "USA",
+      "city": "NY",
+      "street": "Lexington"
+    },
+    "department": "5f8d0d55b54764421b7156d4",
+    "position": "5f8d0d55b54764421b7156e4",
+    "active": true
+  }
+]

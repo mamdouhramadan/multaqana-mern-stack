@@ -1,0 +1,134 @@
+[
+  {
+    "title": "Employee Portal",
+    "description": "HR Portal",
+    "url": "https://portal.example.com",
+    "platform": "ios",
+    "storeName": "App Store",
+    "storeUrl": "https://apple.com",
+    "category": "5f8d0d55b54764421b7156c7",
+    "department": "5f8d0d55b54764421b7156c1",
+    "active": true
+  },
+  {
+    "title": "Sales CRM",
+    "description": "Sales Tool",
+    "url": "https://crm.example.com",
+    "platform": "android",
+    "storeName": "Play Store",
+    "storeUrl": "https://google.com",
+    "category": "5f8d0d55b54764421b7156c7",
+    "department": "5f8d0d55b54764421b7156d2",
+    "active": true
+  },
+  {
+    "title": "Support Desk",
+    "description": "Ticketing",
+    "url": "https://support.example.com",
+    "platform": "ios",
+    "storeName": "App Store",
+    "storeUrl": "https://apple.com",
+    "category": "5f8d0d55b54764421b7156c7",
+    "department": "5f8d0d55b54764421b7156d6",
+    "active": true
+  },
+  {
+    "title": "Inventory App",
+    "description": "Stock Mgmt",
+    "url": "https://inv.example.com",
+    "platform": "android",
+    "storeName": "Play Store",
+    "storeUrl": "https://google.com",
+    "category": "5f8d0d55b54764421b7156c7",
+    "department": "5f8d0d55b54764421b7156d7",
+    "active": true
+  },
+  {
+    "title": "Slack",
+    "description": "Messaging",
+    "url": "https://slack.com",
+    "platform": "ios",
+    "storeName": "App Store",
+    "storeUrl": "https://apple.com",
+    "category": "5f8d0d55b54764421b7156c7",
+    "department": "5f8d0d55b54764421b7156c1",
+    "active": true
+  },
+  {
+    "title": "Zoom",
+    "description": "Video Calls",
+    "url": "https://zoom.us",
+    "platform": "android",
+    "storeName": "Play Store",
+    "storeUrl": "https://google.com",
+    "category": "5f8d0d55b54764421b7156c7",
+    "department": "5f8d0d55b54764421b7156c1",
+    "active": true
+  },
+  {
+    "title": "Jira",
+    "description": "Project Mgmt",
+    "url": "https://jira.com",
+    "platform": "ios",
+    "storeName": "App Store",
+    "storeUrl": "https://apple.com",
+    "category": "5f8d0d55b54764421b7156c7",
+    "department": "5f8d0d55b54764421b7156c1",
+    "active": true
+  },
+  {
+    "title": "Outlook",
+    "description": "Email",
+    "url": "https://outlook.com",
+    "platform": "android",
+    "storeName": "Play Store",
+    "storeUrl": "https://google.com",
+    "category": "5f8d0d55b54764421b7156c7",
+    "department": "5f8d0d55b54764421b7156c1",
+    "active": true
+  },
+  {
+    "title": "Teams",
+    "description": "Collaboration",
+    "url": "https://teams.microsoft.com",
+    "platform": "ios",
+    "storeName": "App Store",
+    "storeUrl": "https://apple.com",
+    "category": "5f8d0d55b54764421b7156c7",
+    "department": "5f8d0d55b54764421b7156c1",
+    "active": true
+  },
+  {
+    "title": "SAP",
+    "description": "ERP",
+    "url": "https://sap.com",
+    "platform": "android",
+    "storeName": "Play Store",
+    "storeUrl": "https://google.com",
+    "category": "5f8d0d55b54764421b7156c7",
+    "department": "5f8d0d55b54764421b7156d1",
+    "active": true
+  },
+  {
+    "title": "Salesforce",
+    "description": "CRM",
+    "url": "https://salesforce.com",
+    "platform": "ios",
+    "storeName": "App Store",
+    "storeUrl": "https://apple.com",
+    "category": "5f8d0d55b54764421b7156c7",
+    "department": "5f8d0d55b54764421b7156d2",
+    "active": true
+  },
+  {
+    "title": "Trello",
+    "description": "Tasks",
+    "url": "https://trello.com",
+    "platform": "android",
+    "storeName": "Play Store",
+    "storeUrl": "https://google.com",
+    "category": "5f8d0d55b54764421b7156c7",
+    "department": "5f8d0d55b54764421b7156c1",
+    "active": true
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    "title": "New Platform Launch",
+    "content": "We are excited to launch our new internal platform.",
+    "author": "5f8d0d55b54764421b7156c5",
+    "active": true,
+    "publishedAt": "2024-01-01T10:00:00.000Z"
+  },
+  {
+    "title": "Employee of the Month",
+    "content": "Congratulations to Sarah for outstanding performance.",
+    "author": "5f8d0d55b54764421b7156c5",
+    "active": true,
+    "publishedAt": "2024-01-02T10:00:00.000Z"
+  },
+  {
+    "title": "Holiday Schedule",
+    "content": "Please note the upcoming holiday dates.",
+    "author": "5f8d0d55b54764421b7156c5",
+    "active": true,
+    "publishedAt": "2024-01-03T10:00:00.000Z"
+  },
+  {
+    "title": "IT Maintenance",
+    "content": "Server maintenance scheduled for this weekend.",
+    "author": "5f8d0d55b54764421b7156c5",
+    "active": true,
+    "publishedAt": "2024-01-04T10:00:00.000Z"
+  },
+  {
+    "title": "New Health Benefits",
+    "content": "We have updated our health insurance plan.",
+    "author": "5f8d0d55b54764421b7156c5",
+    "active": true,
+    "publishedAt": "2024-01-05T10:00:00.000Z"
+  },
+  {
+    "title": "Annual Party Photos",
+    "content": "Check out the photos from last night!",
+    "author": "5f8d0d55b54764421b7156c5",
+    "active": true,
+    "publishedAt": "2024-01-06T10:00:00.000Z"
+  },
+  {
+    "title": "Office Relocation",
+    "content": "We are moving to a new building next month.",
+    "author": "5f8d0d55b54764421b7156c5",
+    "active": true,
+    "publishedAt": "2024-01-07T10:00:00.000Z"
+  },
+  {
+    "title": "Training Workshop",
+    "content": "Sign up for the React workshop.",
+    "author": "5f8d0d55b54764421b7156c5",
+    "active": true,
+    "publishedAt": "2024-01-08T10:00:00.000Z"
+  },
+  {
+    "title": "Security Policy Update",
+    "content": "Please review the new security guidelines.",
+    "author": "5f8d0d55b54764421b7156c5",
+    "active": true,
+    "publishedAt": "2024-01-09T10:00:00.000Z"
+  },
+  {
+    "title": "Quarterly Results",
+    "content": "Our Q1 results are out now.",
+    "author": "5f8d0d55b54764421b7156c5",
+    "active": true,
+    "publishedAt": "2024-01-10T10:00:00.000Z"
+  },
+  {
+    "title": "Welcome New Hires",
+    "content": "Let's welcome our new batch of interns.",
+    "author": "5f8d0d55b54764421b7156c5",
+    "active": true,
+    "publishedAt": "2024-01-11T10:00:00.000Z"
+  },
+  {
+    "title": "Cafeteria Menu",
+    "content": "New healthy options added to the menu.",
+    "author": "5f8d0d55b54764421b7156c5",
+    "active": true,
+    "publishedAt": "2024-01-12T10:00:00.000Z"
+  },
+  {
+    "title": "Charity Run",
+    "content": "Join us for the annual charity marathon.",
+    "author": "5f8d0d55b54764421b7156c5",
+    "active": true,
+    "publishedAt": "2024-01-13T10:00:00.000Z"
+  }
+]

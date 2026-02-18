@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "5f8d0d55b54764421b7156c3",
+    "title": "Software Engineer",
+    "description": "Full Stack Developer",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156c4",
+    "title": "HR Specialist",
+    "description": "Recruitment",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156e1",
+    "title": "Accountant",
+    "description": "Finance Dept",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156e2",
+    "title": "Marketing Manager",
+    "description": "Marketing Lead",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156e3",
+    "title": "Operations Manager",
+    "description": "Ops Lead",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156e4",
+    "title": "Legal Counsel",
+    "description": "Lawyer",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156e5",
+    "title": "Research Scientist",
+    "description": "R&D",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156e6",
+    "title": "Support Agent",
+    "description": "CS",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156e7",
+    "title": "Logistics Coordinator",
+    "description": "Logistics",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156e8",
+    "title": "Procurement Officer",
+    "description": "Purchasing",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156e9",
+    "title": "Compliance Officer",
+    "description": "Auditing",
+    "active": true
+  },
+  {
+    "_id": "5f8d0d55b54764421b7156ea",
+    "title": "Facilities Manager",
+    "description": "Maintenance",
+    "active": true
+  }
+]

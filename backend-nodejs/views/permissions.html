@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Permissions - Multaqana</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Sidenav -->
+  <ul id="slide-out" class="sidenav sidenav-fixed">
+    <li>
+      <div class="logo-text text-indigo">Multaqana<span style="color:#757575;">API</span></div>
+    </li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a href="/" class="waves-effect"><i class="material-icons">home</i>Home</a></li>
+    <li><a href="/auth-docs" class="waves-effect"><i class="material-icons">lock</i>Auth Guide</a></li>
+  </ul>
+
+  <main>
+    <a href="#" data-target="slide-out" class="sidenav-trigger btn-flat hide-on-large-only"><i
+        class="material-icons">menu</i></a>
+
+    <h2 class="white-text">System Permissions</h2>
+    <p class="flow-text grey-text text-lighten-1 mb-4">Access control matrix per module.</p>
+
+    <div class="card card-panel-dark">
+      <div class="card-content">
+        <table class="highlight responsive-table">
+          <thead>
+            <tr>
+              <th>Module</th>
+              <th>Read (GET)</th>
+              <th>Create/Update</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Applications</td>
+              <td><span class="new badge green" data-badge-caption="Public"></span></td>
+              <td><span class="new badge blue" data-badge-caption="Admin / Editor"></span></td>
+              <td><span class="new badge blue" data-badge-caption="Admin / Editor"></span></td>
+            </tr>
+            <tr>
+              <td>News</td>
+              <td><span class="new badge green" data-badge-caption="Public"></span></td>
+              <td><span class="new badge blue" data-badge-caption="Admin / Editor"></span></td>
+              <td><span class="new badge blue" data-badge-caption="Admin / Editor"></span></td>
+            </tr>
+            <tr>
+              <td>FAQs</td>
+              <td><span class="new badge green" data-badge-caption="Public"></span></td>
+              <td><span class="new badge blue" data-badge-caption="Admin / Editor"></span></td>
+              <td><span class="new badge blue" data-badge-caption="Admin / Editor"></span></td>
+            </tr>
+            <tr>
+              <td>Categories</td>
+              <td><span class="new badge green" data-badge-caption="Public"></span></td>
+              <td><span class="new badge blue" data-badge-caption="Admin / Editor"></span></td>
+              <td><span class="new badge red darken-2" data-badge-caption="Admin Only"></span></td>
+            </tr>
+            <tr>
+              <td>Files</td>
+              <td><span class="new badge green" data-badge-caption="Public"></span></td>
+              <td><span class="new badge blue" data-badge-caption="Admin / Editor"></span></td>
+              <td><span class="new badge blue" data-badge-caption="Admin / Editor"></span></td>
+            </tr>
+            <tr>
+              <td>Videos</td>
+              <td><span class="new badge green" data-badge-caption="Public"></span></td>
+              <td><span class="new badge blue" data-badge-caption="Admin / Editor"></span></td>
+              <td><span class="new badge blue" data-badge-caption="Admin / Editor"></span></td>
+            </tr>
+            <tr>
+              <td>Albums</td>
+              <td><span class="new badge green" data-badge-caption="Public"></span></td>
+              <td><span class="new badge blue" data-badge-caption="Admin / Editor"></span></td>
+              <td><span class="new badge blue" data-badge-caption="Admin / Editor"></span></td>
+            </tr>
+            <tr>
+              <td>Magazines</td>
+              <td><span class="new badge green" data-badge-caption="Public"></span></td>
+              <td><span class="new badge blue" data-badge-caption="Admin / Editor"></span></td>
+              <td><span class="new badge blue" data-badge-caption="Admin / Editor"></span></td>
+            </tr>
+            <tr>
+              <td>Positions</td>
+              <td><span class="new badge green" data-badge-caption="Public"></span></td>
+              <td><span class="new badge blue" data-badge-caption="Admin / Editor"></span></td>
+              <td><span class="new badge red darken-2" data-badge-caption="Admin Only"></span></td>
+            </tr>
+            <tr>
+              <td>Departments</td>
+              <td><span class="new badge green" data-badge-caption="Public"></span></td>
+              <td><span class="new badge blue" data-badge-caption="Admin / Editor"></span></td>
+              <td><span class="new badge red darken-2" data-badge-caption="Admin Only"></span></td>
+            </tr>
+            <tr>
+              <td>Attendance</td>
+              <td><span class="new badge teal" data-badge-caption="Private (User)"></span></td>
+              <td><span class="new badge teal" data-badge-caption="User (Clock In/Out)"></span></td>
+              <td><span class="new badge grey" data-badge-caption="N/A"></span></td>
+            </tr>
+            <tr>
+              <td>Leave</td>
+              <td><span class="new badge teal" data-badge-caption="Private (User)"></span></td>
+              <td><span class="new badge purple" data-badge-caption="User (Req) / Admin (Approve)"></span></td>
+              <td><span class="new badge grey" data-badge-caption="N/A"></span></td>
+            </tr>
+            <tr>
+              <td>Users</td>
+              <td><span class="new badge orange darken-3" data-badge-caption="Private"></span></td>
+              <td><span class="new badge orange darken-3" data-badge-caption="User (Self) / Admin (All)"></span></td>
+              <td><span class="new badge red darken-2" data-badge-caption="Admin Only"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.Sidenav.init(document.querySelectorAll('.sidenav'));
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+/* Header */
+.aegov-header::before {
+  display: none;
+}
+ .dda-header{ 
+  position: relative;
+ }
+.transparent .dda-header{
+position: fixed;
+}
+
+/* Home Swiper pagination: reserve space below slides, move bullets down */
+.swiper {
+  padding-bottom: 4rem;
+}
+
+.hero-ticker-swiper {
+  padding-bottom: 0 !important;
+}
+
+.hero-ticker-swiper .swiper-wrapper {
+  justify-content: center;
+  align-items: center;
+}
+
+.news-swiper-bullets .swiper-pagination,
+.home-swiper-bullets .swiper-pagination {
+  bottom: 0.75rem;
+}
+
+/* Home Swiper pagination bullets: 10px × 10px, active = primary */
+.news-swiper-bullets .swiper-pagination-bullet,
+.home-swiper-bullets .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: var(--gray-300);
+  opacity: 1;
+}
+
+.news-swiper-bullets .swiper-pagination-bullet-active,
+.home-swiper-bullets .swiper-pagination-bullet-active {
+  background: var(--primary);
+}
+
+/* Sticky footer icons: invert in dark mode so currentColor SVGs stay visible */
+[data-theme="dark"] dda-sticky-footer img,
+.dark dda-sticky-footer img {
+  filter: brightness(0) invert(1);
+}
+
+/* Hero home carousel card icons: invert in dark mode for visibility on dark hero */
+.dda-home-carousel-track{
+gap: 16px;
+}
+.bannerCardContact-desc,
+.dda-banner-card-title{
+  text-align: center;
+}
+dda-home-carousel img{
+  max-width: 44px;
+}
+[data-theme="dark"] dda-home-carousel img,
+.dark dda-home-carousel img {
+  filter: brightness(0) invert(1);
+}
+
+/* News (DdaEventCard): hide event date block, 1:1 image aspect ratio */
+dda-event-card .dda-card-event-date {
+  display: none;
+}
+
+dda-event-card .dda-position-relative {
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+dda-event-card .dda-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* News card: replace default "Open" with "View details" + arrow (arrow flips in RTL) */
+dda-event-card .dda-card-footer a {
+  font-size: 0;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.news-card-link-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card-view-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--dda-color-primary-40, var(--primary));
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  pointer-events: none;
+}
+
+.news-card-link-wrapper .dda-card .dda-chip {
+  border: 0;
+  background: transparent;
+  opacity: .5;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+[dir="rtl"] .news-card-view-details {
+  flex-direction: row-reverse;
+}
+
+.news-card-view-details-arrow {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+[dir="rtl"] .news-card-view-details-arrow {
+  transform: rotate(180deg);
+}
+
+/* Albums marquee section: 4 copies, scroll by 25% so one full set loops seamlessly */
+.home-albums-marquee-inner {
+  animation: homeMarqueeScroll linear infinite;
+}
+
+@keyframes homeMarqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}

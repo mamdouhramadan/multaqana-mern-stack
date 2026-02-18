@@ -1,0 +1,95 @@
+[
+  {
+    "user": "5f8d0d55b54764421b7156c6",
+    "date": "2024-01-01T00:00:00.000Z",
+    "status": "Present",
+    "clockIn": "2024-01-01T09:00:00.000Z",
+    "clockOut": "2024-01-01T17:00:00.000Z",
+    "workHours": 8
+  },
+  {
+    "user": "5f8d0d55b54764421b7156c6",
+    "date": "2024-01-02T00:00:00.000Z",
+    "status": "Present",
+    "clockIn": "2024-01-02T09:10:00.000Z",
+    "clockOut": "2024-01-02T17:00:00.000Z",
+    "workHours": 7.8
+  },
+  {
+    "user": "5f8d0d55b54764421b7156c6",
+    "date": "2024-01-03T00:00:00.000Z",
+    "status": "Late",
+    "clockIn": "2024-01-03T10:00:00.000Z",
+    "clockOut": "2024-01-03T17:00:00.000Z",
+    "workHours": 7,
+    "lateMinutes": 60
+  },
+  {
+    "user": "5f8d0d55b54764421b7156c6",
+    "date": "2024-01-04T00:00:00.000Z",
+    "status": "Present",
+    "clockIn": "2024-01-04T08:55:00.000Z",
+    "clockOut": "2024-01-04T17:00:00.000Z",
+    "workHours": 8
+  },
+  {
+    "user": "5f8d0d55b54764421b7156c6",
+    "date": "2024-01-05T00:00:00.000Z",
+    "status": "Present",
+    "clockIn": "2024-01-05T09:00:00.000Z",
+    "clockOut": "2024-01-05T17:00:00.000Z",
+    "workHours": 8
+  },
+  {
+    "user": "5f8d0d55b54764421b715701",
+    "date": "2024-01-01T00:00:00.000Z",
+    "status": "Present",
+    "clockIn": "2024-01-01T09:00:00.000Z",
+    "clockOut": "2024-01-01T17:00:00.000Z",
+    "workHours": 8
+  },
+  {
+    "user": "5f8d0d55b54764421b715701",
+    "date": "2024-01-02T00:00:00.000Z",
+    "status": "Absent",
+    "workHours": 0
+  },
+  {
+    "user": "5f8d0d55b54764421b715702",
+    "date": "2024-01-01T00:00:00.000Z",
+    "status": "Present",
+    "clockIn": "2024-01-01T09:00:00.000Z",
+    "clockOut": "2024-01-01T17:00:00.000Z",
+    "workHours": 8
+  },
+  {
+    "user": "5f8d0d55b54764421b715703",
+    "date": "2024-01-01T00:00:00.000Z",
+    "status": "Present",
+    "clockIn": "2024-01-01T09:00:00.000Z",
+    "clockOut": "2024-01-01T17:00:00.000Z",
+    "workHours": 8
+  },
+  {
+    "user": "5f8d0d55b54764421b715704",
+    "date": "2024-01-01T00:00:00.000Z",
+    "status": "Leave",
+    "workHours": 0
+  },
+  {
+    "user": "5f8d0d55b54764421b715705",
+    "date": "2024-01-01T00:00:00.000Z",
+    "status": "Present",
+    "clockIn": "2024-01-01T09:00:00.000Z",
+    "clockOut": "2024-01-01T17:00:00.000Z",
+    "workHours": 8
+  },
+  {
+    "user": "5f8d0d55b54764421b715706",
+    "date": "2024-01-01T00:00:00.000Z",
+    "status": "Present",
+    "clockIn": "2024-01-01T09:00:00.000Z",
+    "clockOut": "2024-01-01T17:00:00.000Z",
+    "workHours": 8
+  }
+]

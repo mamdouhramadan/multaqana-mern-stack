@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Config & Alerts Docs - Multaqana</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- PrimsJS for code highlighting override if needed, but using custom css -->
+</head>
+
+<body>
+  <!-- Sidenav -->
+  <ul id="slide-out" class="sidenav sidenav-fixed">
+    <li>
+      <div class="logo-text text-indigo">Multaqana<span style="color:#757575;">API</span></div>
+    </li>
+    <li>
+      <div class="divider"></div>
+    </li>
+
+    <li>
+      <div class="subheader">Modules</div>
+    </li>
+    <li><a href="#intro" class="waves-effect">Overview</a></li>
+    <li><a href="#settings" class="waves-effect">Settings</a></li>
+    <li><a href="#notifications" class="waves-effect">Notifications</a></li>
+    <li><a href="#websocket" class="waves-effect">Real-time (Socket.io)</a></li>
+
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a href="/" class="waves-effect"><i class="material-icons">home</i>Home</a></li>
+  </ul>
+
+  <main>
+    <a href="#" data-target="slide-out" class="sidenav-trigger btn-flat hide-on-large-only"><i
+        class="material-icons">menu</i></a>
+
+    <section id="intro">
+      <h2 class="white-text">Settings & Notifications</h2>
+      <p class="flow-text grey-text text-lighten-1">
+        Manage global configurations and user alerts. Includes <strong>Real-time</strong> Socket.io integration guide.
+      </p>
+    </section>
+
+    <!-- SETTINGS -->
+    <section id="settings">
+      <h4 class="teal-text text-lighten-2">Settings</h4>
+      <p class="grey-text">Key-Value store for application configs.</p>
+
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method get">GET</span> <span class="url">/api/settings/public</span>
+          <p class="grey-text text-lighten-1 mt-2">Public config (No Auth required).</p>
+        </div>
+      </div>
+
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method get">GET</span> <span class="url">/api/settings</span>
+          <br><br>
+          <span class="chip-method post">POST</span> <span class="url">/api/settings</span>
+          <p class="grey-text text-lighten-1 mt-2">Admin Only. Create or Update.</p>
+        </div>
+      </div>
+
+      <div class="">
+        <ul class="tabs tabs-transparent" style="background-color: #1e1e1e;">
+          <li class="tab col s3"><a class="active" href="#set-params">Payload (JSON)</a></li>
+        </ul>
+        <div id="set-params" class="col s12 card-panel-dark p-4">
+          <pre class="code-block">
+{
+  "key": "maintenance_mode",
+  "value": true,           // String, Boolean, Object
+  "category": "System",
+  "isPublic": true,        // Exposed in public endpoint
+  "description": "Enable maintenance screen"
+}</pre>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- NOTIFICATIONS -->
+    <section id="notifications">
+      <h4 class="orange-text text-lighten-2">Notifications</h4>
+
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method get">GET</span> <span class="url">/api/notifications</span>
+          <p class="grey-text text-lighten-1 mt-2">Get logs for current user. Paginated.</p>
+        </div>
+      </div>
+
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method post">POST</span> <span class="url">/api/notifications</span>
+          <p class="grey-text text-lighten-1 mt-2">Admin/System: Create & Broadcast.</p>
+        </div>
+      </div>
+
+      <div class="">
+        <ul class="tabs tabs-transparent" style="background-color: #1e1e1e;">
+          <li class="tab col s3"><a class="active" href="#notif-params">Payload (JSON)</a></li>
+        </ul>
+        <div id="notif-params" class="col s12 card-panel-dark p-4">
+          <pre class="code-block">
+{
+  "userId": "65b...",
+  "title": "Task Assigned",
+  "description": "Jim assigned you a task.",
+  "category": "Task",
+  "link": "/tasks/123",
+  "data": { "taskId": "123", "priority": "high" }
+}</pre>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- WEBSOCKET -->
+    <section id="websocket">
+      <h4 class="purple-text text-lighten-2">Real-time Integration</h4>
+      <div class="card card-panel-dark">
+        <div class="card-content">
+          <span class="card-title white-text">Client-Side Implementation</span>
+          <p class="grey-text text-lighten-1">1. Install socket.io-client</p>
+          <code class="white-text" style="background: #333; padding: 2px 5px;">npm install socket.io-client</code>
+
+          <br><br>
+          <p class="grey-text text-lighten-1">2. Connect & Listen</p>
+          <pre class="code-block" style="background: #111;">
+import { io } from "socket.io-client";
+
+// Connect to Backend URL
+const socket = io("http://localhost:5000");
+
+// On Login, Join Room
+const userId = "USER_ID_FROM_AUTH";
+socket.emit("join_room", userId);
+
+// Listen for notifications
+socket.on("new_notification", (notification) => {
+    console.log("New Alert:", notification);
+    // Show Toast / Update Badge
+});
+</pre>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.Sidenav.init(document.querySelectorAll('.sidenav'));
+      M.Tabs.init(document.querySelectorAll('.tabs'));
+    });
+  </script>
+</body>
+
+</html>

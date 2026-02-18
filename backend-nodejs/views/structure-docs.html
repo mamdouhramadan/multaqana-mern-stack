@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Structure Documentation - Multaqana</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Sidenav -->
+  <ul id="slide-out" class="sidenav sidenav-fixed">
+    <li>
+      <div class="logo-text text-indigo">Multaqana<span style="color:#757575;">API</span></div>
+    </li>
+    <li>
+      <div class="divider"></div>
+    </li>
+
+    <li>
+      <div class="subheader">Modules</div>
+    </li>
+    <li><a href="#intro" class="waves-effect">Introduction</a></li>
+    <li><a href="#categories" class="waves-effect">Categories</a></li>
+    <li><a href="#departments" class="waves-effect">Departments</a></li>
+    <li><a href="#positions" class="waves-effect">Positions</a></li>
+
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a href="/media-docs" class="waves-effect"><i class="material-icons">perm_media</i>Media Guide</a></li>
+  </ul>
+
+  <main>
+    <a href="#" data-target="slide-out" class="sidenav-trigger btn-flat hide-on-large-only"><i
+        class="material-icons">menu</i></a>
+
+    <section id="intro">
+      <h2 class="white-text">Structure API Guide</h2>
+      <p class="flow-text grey-text text-lighten-1">
+        Endpoints for organizational structure: <strong>Categories, Departments, and Positions</strong>.
+      </p>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section id="categories">
+      <h4 class="teal-text text-lighten-2">Categories</h4>
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method get">GET</span> <span class="url">/api/categories</span>
+          <p class="grey-text text-lighten-1 mt-2">Filter by module using query params.</p>
+          <br>
+          <code class="white-text" style="background: #333; padding: 2px 6px;">?module=news</code>
+        </div>
+      </div>
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method post">POST</span> <span class="url">/api/categories</span>
+        </div>
+      </div>
+
+      <div class="">
+        <ul class="tabs tabs-transparent" style="background-color: #1e1e1e;">
+          <li class="tab col s3"><a class="active" href="#cat-params">Payload (JSON)</a></li>
+        </ul>
+        <div id="cat-params" class="col s12 card-panel-dark p-4">
+          <pre class="code-block">
+{
+  "title": "Technology",
+  "description": "Tech news",
+  "module": "news" // news, video, faq, file, album
+}</pre>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- DEPARTMENTS -->
+    <section id="departments">
+      <h4 class="orange-text text-lighten-2">Departments</h4>
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method get">GET</span> <span class="url">/api/departments</span>
+        </div>
+      </div>
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method post">POST</span> <span class="url">/api/departments</span>
+          <br><br>
+          <span class="grey-text">Payload: </span> <code
+            class="white-text">{ "title": "IT", "description": "..." }</code>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- POSITIONS -->
+    <section id="positions">
+      <h4 class="purple-text text-lighten-2">Positions</h4>
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method get">GET</span> <span class="url">/api/positions</span>
+        </div>
+      </div>
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method post">POST</span> <span class="url">/api/positions</span>
+          <br><br>
+          <span class="grey-text">Payload: </span> <code
+            class="white-text">{ "title": "Senior Dev", "department": "DEPT_ID" }</code>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.Sidenav.init(document.querySelectorAll('.sidenav'));
+      M.Tabs.init(document.querySelectorAll('.tabs'));
+    });
+  </script>
+</body>
+
+</html>

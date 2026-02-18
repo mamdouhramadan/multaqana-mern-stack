@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+@import "./assets/css/global.css";
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}

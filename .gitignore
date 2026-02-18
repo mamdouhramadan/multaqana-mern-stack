@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build / output
+dist/
+dist-ssr/
+build/
+*.tsbuildinfo
+
+# Logs / OS
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Editor / tooling (all folders)
+.vscode/
+.cursor/
+.specstory/
+
+# Agent / AI files (all folders)
+**/agents.md
+**/AGENTS.md
+
+# Other
+.idea/
+*.local
+.claude/
+.claude/*
+.agent/
+.agent/*
+.agents/
+.agents/*
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

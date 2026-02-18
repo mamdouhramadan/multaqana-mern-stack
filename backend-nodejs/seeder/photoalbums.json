@@ -1,0 +1,101 @@
+[
+  {
+    "title": "Annual Party 2023",
+    "category": "5f8d0d55b54764421b7156c8",
+    "images": [
+      "/img/party1.jpg",
+      "/img/party2.jpg"
+    ],
+    "active": true
+  },
+  {
+    "title": "Team Building 2023",
+    "category": "5f8d0d55b54764421b7156c8",
+    "images": [
+      "/img/team1.jpg",
+      "/img/team2.jpg"
+    ],
+    "active": true
+  },
+  {
+    "title": "Office Opening",
+    "category": "5f8d0d55b54764421b7156f6",
+    "images": [
+      "/img/office1.jpg",
+      "/img/office2.jpg"
+    ],
+    "active": true
+  },
+  {
+    "title": "Award Ceremony",
+    "category": "5f8d0d55b54764421b7156c8",
+    "images": [
+      "/img/award1.jpg"
+    ],
+    "active": true
+  },
+  {
+    "title": "Charity Event",
+    "category": "5f8d0d55b54764421b7156c8",
+    "images": [
+      "/img/charity1.jpg"
+    ],
+    "active": true
+  },
+  {
+    "title": "Sports Day",
+    "category": "5f8d0d55b54764421b7156f6",
+    "images": [
+      "/img/sports1.jpg"
+    ],
+    "active": true
+  },
+  {
+    "title": "Hackathon",
+    "category": "5f8d0d55b54764421b7156c8",
+    "images": [
+      "/img/hack1.jpg"
+    ],
+    "active": true
+  },
+  {
+    "title": "Workshop",
+    "category": "5f8d0d55b54764421b7156c8",
+    "images": [
+      "/img/work1.jpg"
+    ],
+    "active": true
+  },
+  {
+    "title": "Conference",
+    "category": "5f8d0d55b54764421b7156c8",
+    "images": [
+      "/img/conf1.jpg"
+    ],
+    "active": true
+  },
+  {
+    "title": "Client Visit",
+    "category": "5f8d0d55b54764421b7156f6",
+    "images": [
+      "/img/client1.jpg"
+    ],
+    "active": true
+  },
+  {
+    "title": "Farewell Party",
+    "category": "5f8d0d55b54764421b7156c8",
+    "images": [
+      "/img/farewell1.jpg"
+    ],
+    "active": true
+  },
+  {
+    "title": "New Year 2024",
+    "category": "5f8d0d55b54764421b7156c8",
+    "images": [
+      "/img/ny1.jpg"
+    ],
+    "active": true
+  }
+]

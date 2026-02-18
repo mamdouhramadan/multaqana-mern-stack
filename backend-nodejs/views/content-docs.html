@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Documentation - Multaqana</title>
+
+  <!-- Style CSS (Includes Materialize & Fonts) -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Sidenav -->
+  <ul id="slide-out" class="sidenav sidenav-fixed">
+    <li>
+      <div class="logo-text text-indigo">Multaqana<span style="color:#757575;">API</span></div>
+    </li>
+    <li>
+      <div class="divider"></div>
+    </li>
+
+    <li>
+      <div class="subheader">Modules</div>
+    </li>
+    <li><a href="#intro" class="waves-effect">Introduction</a></li>
+    <li><a href="#news" class="waves-effect">News</a></li>
+    <li><a href="#magazines" class="waves-effect">Magazines</a></li>
+    <li><a href="#faqs" class="waves-effect">FAQs</a></li>
+
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a href="/auth-docs" class="waves-effect"><i class="material-icons">lock</i>Auth Guide</a></li>
+  </ul>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hamburger for mobile -->
+    <a href="#" data-target="slide-out" class="sidenav-trigger btn-flat hide-on-large-only"><i
+        class="material-icons">menu</i></a>
+
+    <!-- Introduction -->
+    <section id="intro">
+      <h2 class="white-text">Content API Guide</h2>
+      <p class="flow-text grey-text text-lighten-1">
+        Endpoints for managing dynamic content: <strong>News, Magazines, and FAQs</strong>.
+        All list endpoints support pagination.
+      </p>
+      <div class="card-panel card-panel-dark" style="border-left: 4px solid #009688;">
+        <span class="teal-text text-lighten-2"><strong>Global Query Params:</strong></span>
+        <br><br>
+        <code class="white-text" style="background: #333; padding: 2px 6px; border-radius: 4px;">?page=1</code>
+        <code class="white-text" style="background: #333; padding: 2px 6px; border-radius: 4px;">?limit=10</code>
+        <code class="white-text" style="background: #333; padding: 2px 6px; border-radius: 4px;">?search=keyword</code>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- NEWS SECTION -->
+    <section id="news">
+      <h4 class="teal-text text-lighten-2">News</h4>
+
+      <!-- GET /api/news -->
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method get">GET</span> <span class="url">/api/news</span>
+          <p class="grey-text text-lighten-1" style="margin-top: 10px;">Retrieve paginated news articles.</p>
+        </div>
+      </div>
+
+      <!-- POST /api/news -->
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method post">POST</span> <span class="url">/api/news</span>
+          <p class="grey-text text-lighten-1" style="margin-top: 10px;">Create a new article. Requires authentication.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tab Structure -->
+      <div class="">
+        <div class="col s12">
+          <ul class="tabs tabs-transparent" style="background-color: #1e1e1e;">
+            <li class="tab col s3"><a class="active" href="#news-params">Payload (FormData)</a></li>
+            <li class="tab col s3"><a href="#news-response">Response</a></li>
+          </ul>
+        </div>
+
+        <!-- Content -->
+        <div id="news-params" class="col s12 card-panel-dark p-4">
+          <table class="highlight responsive-table">
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Type</th>
+                <th>Required</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="blue-text text-lighten-2">title</td>
+                <td class="type-col">String</td>
+                <td class="required">Yes</td>
+                <td>Article headline.</td>
+              </tr>
+              <tr>
+                <td class="blue-text text-lighten-2">content</td>
+                <td class="type-col">String</td>
+                <td class="required">Yes</td>
+                <td>Full HTML or Text content.</td>
+              </tr>
+              <tr>
+                <td class="blue-text text-lighten-2">image</td>
+                <td class="type-col">File</td>
+                <td class="grey-text">Option</td>
+                <td>Cover image (max 5MB).</td>
+              </tr>
+              <tr>
+                <td class="blue-text text-lighten-2">category</td>
+                <td class="type-col">ID</td>
+                <td class="required">Yes</td>
+                <td>Category Object ID.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="news-response" class="col s12 card-panel-dark">
+          <br>
+          <pre class="code-block">
+{
+    "success": true,
+    "data": {
+        "_id": "65b...",
+        "title": "Breaking News",
+        "slug": "breaking-news",
+        "image": "/uploads/news/img-123.jpg"
+    }
+}</pre>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- MAGAZINES SECTION -->
+    <section id="magazines">
+      <h4 class="orange-text text-lighten-2">Magazines</h4>
+
+      <!-- GET /api/magazines -->
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method get">GET</span> <span class="url">/api/magazines</span>
+          <p class="grey-text text-lighten-1" style="margin-top: 10px;">List all magazines.</p>
+        </div>
+      </div>
+
+      <!-- POST /api/magazines -->
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method post">POST</span> <span class="url">/api/magazines</span>
+          <p class="grey-text text-lighten-1" style="margin-top: 10px;">Upload a new magazine PDF.</p>
+        </div>
+      </div>
+
+      <!-- Tab Structure -->
+      <div class="">
+        <div class="col s12">
+          <ul class="tabs tabs-transparent" style="background-color: #1e1e1e;">
+            <li class="tab col s3"><a class="active" href="#mag-params">Payload (FormData)</a></li>
+          </ul>
+        </div>
+
+        <div id="mag-params" class="col s12 card-panel-dark p-4">
+          <table class="highlight responsive-table">
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Type</th>
+                <th>Required</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="blue-text text-lighten-2">title</td>
+                <td class="type-col">String</td>
+                <td class="required">Yes</td>
+                <td>Magazine Title.</td>
+              </tr>
+              <tr>
+                <td class="blue-text text-lighten-2">file</td>
+                <td class="type-col">File</td>
+                <td class="required">Yes</td>
+                <td>PDF File.</td>
+              </tr>
+              <tr>
+                <td class="blue-text text-lighten-2">thumbnail</td>
+                <td class="type-col">File</td>
+                <td class="required">Yes</td>
+                <td>Cover Image.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- FAQ SECTION -->
+    <section id="faqs">
+      <h4 class="purple-text text-lighten-2">FAQs</h4>
+
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method get">GET</span> <span class="url">/api/faqs</span>
+          <br><br>
+          <span class="chip-method post">POST</span> <span class="url">/api/faqs</span>
+        </div>
+      </div>
+
+      <div class="">
+        <div class="col s12">
+          <ul class="tabs tabs-transparent" style="background-color: #1e1e1e;">
+            <li class="tab col s3"><a class="active" href="#faq-params">Payload (JSON)</a></li>
+          </ul>
+        </div>
+
+        <div id="faq-params" class="col s12 card-panel-dark p-4">
+          <pre class="code-block">
+{
+  "question": "How do I reset my password?",
+  "answer": "Go to settings page...",
+  "category": "65b...",
+  "tags": ["account", "security"]
+}</pre>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.Sidenav.init(document.querySelectorAll('.sidenav'));
+      M.Tabs.init(document.querySelectorAll('.tabs'));
+    });
+  </script>
+</body>
+
+</html>

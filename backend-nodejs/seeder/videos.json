@@ -1,0 +1,98 @@
+[
+  {
+    "title": "CEO Message",
+    "videoType": "file",
+    "videoFile": "/videos/ceo.mp4",
+    "category": "5f8d0d55b54764421b7156c7",
+    "createdBy": "5f8d0d55b54764421b7156c5",
+    "active": true
+  },
+  {
+    "title": "Product Demo",
+    "videoType": "url",
+    "videoUrl": "https://youtube.com/watch?v=123",
+    "category": "5f8d0d55b54764421b7156f4",
+    "createdBy": "5f8d0d55b54764421b7156c5",
+    "active": true
+  },
+  {
+    "title": "Safety Training",
+    "videoType": "file",
+    "videoFile": "/videos/safety.mp4",
+    "category": "5f8d0d55b54764421b7156f7",
+    "createdBy": "5f8d0d55b54764421b7156c5",
+    "active": true
+  },
+  {
+    "title": "Onboarding",
+    "videoType": "url",
+    "videoUrl": "https://vimeo.com/456",
+    "category": "5f8d0d55b54764421b7156f4",
+    "createdBy": "5f8d0d55b54764421b7156c5",
+    "active": true
+  },
+  {
+    "title": "Tech Talk: AI",
+    "videoType": "file",
+    "videoFile": "/videos/ai.mp4",
+    "category": "5f8d0d55b54764421b7156f4",
+    "createdBy": "5f8d0d55b54764421b7156c5",
+    "active": true
+  },
+  {
+    "title": "Townhall Meeting",
+    "videoType": "file",
+    "videoFile": "/videos/townhall.mp4",
+    "category": "5f8d0d55b54764421b7156f4",
+    "createdBy": "5f8d0d55b54764421b7156c5",
+    "active": true
+  },
+  {
+    "title": "Culture Video",
+    "videoType": "url",
+    "videoUrl": "https://youtube.com/watch?v=789",
+    "category": "5f8d0d55b54764421b7156f4",
+    "createdBy": "5f8d0d55b54764421b7156c5",
+    "active": true
+  },
+  {
+    "title": "Coding Best Practices",
+    "videoType": "url",
+    "videoUrl": "https://youtube.com/watch?v=abc",
+    "category": "5f8d0d55b54764421b7156f4",
+    "createdBy": "5f8d0d55b54764421b7156c5",
+    "active": true
+  },
+  {
+    "title": "Leadership Summit",
+    "videoType": "file",
+    "videoFile": "/videos/summit.mp4",
+    "category": "5f8d0d55b54764421b7156f4",
+    "createdBy": "5f8d0d55b54764421b7156c5",
+    "active": true
+  },
+  {
+    "title": "Customer Success Story",
+    "videoType": "url",
+    "videoUrl": "https://youtube.com/watch?v=xyz",
+    "category": "5f8d0d55b54764421b7156f4",
+    "createdBy": "5f8d0d55b54764421b7156c5",
+    "active": true
+  },
+  {
+    "title": "Year End Review",
+    "videoType": "file",
+    "videoFile": "/videos/review.mp4",
+    "category": "5f8d0d55b54764421b7156f4",
+    "createdBy": "5f8d0d55b54764421b7156c5",
+    "active": true
+  },
+  {
+    "title": "Office Tour",
+    "videoType": "url",
+    "videoUrl": "https://youtube.com/watch?v=tour",
+    "category": "5f8d0d55b54764421b7156f4",
+    "createdBy": "5f8d0d55b54764421b7156c5",
+    "active": true
+  }
+]

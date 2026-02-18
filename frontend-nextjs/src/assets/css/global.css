@@ -1,0 +1,211 @@
+/* almarai font */
+:root {
+  --font-family-main: "Almarai", "Roboto", sans-serif !important;
+  --radius: 0.625rem;
+  /* Primary palette (brand) */
+  --primary-50: #F9F7ED;
+  --primary-100: #F2ECCF;
+  --primary-200: #E6D7A2;
+  --primary-300: #D7BC6D;
+  --primary-400: #CBA344;
+  --primary-500: #B68A35;
+  --primary-600: #92722A;
+  --primary-700: #7C5E24;
+  --primary-800: #6C4527;
+  --primary-900: #5D3B26;
+  --primary-950: #361E12;
+  /* Semantic colors - light theme */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.147 0.004 49.25);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.147 0.004 49.25);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.147 0.004 49.25);
+  --primary: var(--primary-600);
+  --primary-foreground: var(--primary-50);
+  --secondary: oklch(0.97 0.001 106.424);
+  --secondary-foreground: oklch(0.216 0.006 56.043);
+  --muted: oklch(0.97 0.001 106.424);
+  --muted-foreground: oklch(0.553 0.013 58.071);
+  --accent: var(--primary-100);
+  --accent-foreground: var(--primary-900);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.923 0.003 48.717);
+  --input: oklch(0.923 0.003 48.717);
+  --ring: var(--primary-500);
+  --chart-1: var(--primary-500);
+  --chart-2: var(--primary-700);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: var(--primary-400);
+  --chart-5: var(--primary-600);
+  --sidebar: oklch(0.985 0.001 106.423);
+  --sidebar-foreground: oklch(0.147 0.004 49.25);
+  --sidebar-primary: var(--primary-600);
+  --sidebar-primary-foreground: var(--primary-50);
+  --sidebar-accent: var(--primary-100);
+  --sidebar-accent-foreground: var(--primary-900);
+  --sidebar-border: oklch(0.923 0.003 48.717);
+  --sidebar-ring: var(--primary-500);
+  /* Gray scale - light theme (for bg-gray-*, text-gray-*) */
+  --gray-50: oklch(0.985 0.002 247.858);
+  --gray-100: oklch(0.967 0.003 247.896);
+  --gray-200: oklch(0.923 0.003 48.717);
+  --gray-300: oklch(0.869 0.005 252.894);
+  --gray-400: oklch(0.704 0.01 256.788);
+  --gray-500: oklch(0.553 0.013 58.071);
+  --gray-600: oklch(0.446 0.013 256.848);
+  --gray-700: oklch(0.372 0.011 257.709);
+  --gray-800: oklch(0.279 0.008 257.281);
+  --gray-900: oklch(0.21 0.006 264.695);
+  --gray-950: oklch(0.13 0.004 264.695);
+}
+
+/* Dark theme – when .dark is applied (e.g. on html), semantic colors flip */
+.dark {
+  --background: oklch(0.147 0.004 49.25);
+  --foreground: oklch(0.985 0.001 106.423);
+  --card: oklch(0.147 0.004 49.25);
+  --card-foreground: oklch(0.985 0.001 106.423);
+  --popover: oklch(0.147 0.004 49.25);
+  --popover-foreground: oklch(0.985 0.001 106.423);
+  --primary: var(--primary-500);
+  --primary-foreground: var(--primary-50);
+  --secondary: oklch(0.279 0.008 257.281);
+  --secondary-foreground: oklch(0.985 0.001 106.423);
+  --muted: oklch(0.279 0.008 257.281);
+  --muted-foreground: oklch(0.704 0.01 256.788);
+  --accent: oklch(0.279 0.008 257.281);
+  --accent-foreground: oklch(0.985 0.001 106.423);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.279 0.008 257.281);
+  --input: oklch(0.279 0.008 257.281);
+  --ring: var(--primary-400);
+  --sidebar: oklch(0.21 0.006 264.695);
+  --sidebar-foreground: oklch(0.985 0.001 106.423);
+  --sidebar-primary: var(--primary-500);
+  --sidebar-primary-foreground: var(--primary-50);
+  --sidebar-accent: oklch(0.279 0.008 257.281);
+  --sidebar-accent-foreground: oklch(0.985 0.001 106.423);
+  --sidebar-border: oklch(0.279 0.008 257.281);
+  --sidebar-ring: var(--primary-400);
+}
+
+/* React Big Calendar – dark mode (bg-gray-800, text-gray-100) */
+.dark .events-calendar-wrapper .rbc-calendar {
+  background: var(--gray-800);
+  color: var(--gray-100);
+}
+.dark .events-calendar-wrapper .rbc-toolbar {
+  background: var(--gray-800);
+  color: var(--gray-100);
+  border-color: var(--gray-700);
+}
+.dark .events-calendar-wrapper .rbc-toolbar button {
+  color: var(--gray-100);
+  border-color: var(--gray-600);
+  background: var(--gray-800);
+}
+.dark .events-calendar-wrapper .rbc-toolbar button:hover,
+.dark .events-calendar-wrapper .rbc-toolbar button:focus {
+  background: var(--gray-700);
+  color: var(--gray-100);
+}
+.dark .events-calendar-wrapper .rbc-header {
+  background: var(--gray-800);
+  color: var(--gray-100);
+  border-color: var(--gray-700);
+}
+.dark .events-calendar-wrapper .rbc-month-view,
+.dark .events-calendar-wrapper .rbc-time-view,
+.dark .events-calendar-wrapper .rbc-agenda-view {
+  background: var(--gray-800);
+  border-color: var(--gray-700);
+}
+.dark .events-calendar-wrapper .rbc-month-row,
+.dark .events-calendar-wrapper .rbc-day-bg {
+  background: var(--gray-800);
+  border-color: var(--gray-700);
+}
+.dark .events-calendar-wrapper .rbc-off-range-bg {
+  background: var(--gray-900);
+}
+.dark .events-calendar-wrapper .rbc-date-cell {
+  color: var(--gray-100);
+}
+.dark .events-calendar-wrapper .rbc-off-range .rbc-date-cell {
+  color: var(--gray-500);
+}
+.dark .events-calendar-wrapper .rbc-today {
+  background: var(--gray-700);
+}
+.dark .events-calendar-wrapper .rbc-event {
+  color: var(--gray-100);
+}
+.dark .events-calendar-wrapper .rbc-time-content,
+.dark .events-calendar-wrapper .rbc-time-header-content,
+.dark .events-calendar-wrapper .rbc-time-header-gutter {
+  border-color: var(--gray-700);
+}
+.dark .events-calendar-wrapper .rbc-timeslot-group {
+  border-color: var(--gray-700);
+}
+.dark .events-calendar-wrapper .rbc-day-slot .rbc-time-slot {
+  border-color: var(--gray-700);
+}
+.dark .events-calendar-wrapper .rbc-agenda-table {
+  background: var(--gray-800);
+  color: var(--gray-100);
+  border-color: var(--gray-700);
+}
+.dark .events-calendar-wrapper .rbc-agenda-view table.rbc-agenda-table thead tr th {
+  background: var(--gray-800);
+  color: var(--gray-100);
+  border-color: var(--gray-700);
+}
+.dark .events-calendar-wrapper .rbc-agenda-view table.rbc-agenda-table tbody tr td {
+  background: var(--gray-800);
+  color: var(--gray-100);
+  border-color: var(--gray-700);
+}
+.dark .events-calendar-wrapper .rbc-current-time-indicator {
+  background-color: var(--primary-500);
+}
+.dark .events-calendar-wrapper .rbc-show-more {
+  color: var(--primary-400);
+}
+.dark .events-calendar-wrapper .rbc-row-segment .rbc-event-content {
+  color: var(--gray-100);
+}
+.dark .events-calendar-wrapper .rbc-label {
+  color: var(--gray-100);
+}
+.dark .events-calendar-wrapper .rbc-time-gutter {
+  color: var(--gray-400);
+}
+.dark .events-calendar-wrapper .rbc-allday-cell {
+  background: var(--gray-800);
+  border-color: var(--gray-700);
+}
+.dark .events-calendar-wrapper .rbc-overlay-header {
+  background: var(--gray-800);
+  color: var(--gray-100);
+  border-color: var(--gray-700);
+}
+.dark .events-calendar-wrapper .rbc-overlay {
+  background: var(--gray-800);
+  border-color: var(--gray-700);
+}
+.dark .events-calendar-wrapper .rbc-popover {
+  background: var(--gray-800);
+  color: var(--gray-100);
+  border-color: var(--gray-700);
+}
+.dark .events-calendar-wrapper .rbc-popover .rbc-header {
+  background: var(--gray-800);
+  border-color: var(--gray-700);
+}
+.dark .events-calendar-wrapper .rbc-toolbar-label {
+  color: var(--gray-100);
+}

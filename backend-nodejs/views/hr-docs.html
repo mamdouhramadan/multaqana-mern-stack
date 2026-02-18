@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR & Employee Docs - Multaqana</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Sidenav -->
+  <ul id="slide-out" class="sidenav sidenav-fixed">
+    <li>
+      <div class="logo-text text-indigo">Multaqana<span style="color:#757575;">API</span></div>
+    </li>
+    <li>
+      <div class="divider"></div>
+    </li>
+
+    <li>
+      <div class="subheader">Modules</div>
+    </li>
+    <li><a href="#intro" class="waves-effect">Introduction</a></li>
+    <li><a href="#attendance" class="waves-effect">Attendance</a></li>
+    <li><a href="#leaves" class="waves-effect">Leaves</a></li>
+    <li><a href="#applications" class="waves-effect">Applications</a></li>
+    <li><a href="#users" class="waves-effect">Users</a></li>
+
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a href="/auth-docs" class="waves-effect"><i class="material-icons">lock</i>Auth Guide</a></li>
+  </ul>
+
+  <main>
+    <a href="#" data-target="slide-out" class="sidenav-trigger btn-flat hide-on-large-only"><i
+        class="material-icons">menu</i></a>
+
+    <section id="intro">
+      <h2 class="white-text">HR & Employee API Guide</h2>
+      <p class="flow-text grey-text text-lighten-1">
+        Endpoints for <strong>Attendance, Leave Requests, Job Applications, and User Management</strong>.
+      </p>
+    </section>
+
+    <!-- ATTENDANCE -->
+    <section id="attendance">
+      <h4 class="teal-text text-lighten-2">Attendance</h4>
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method get">GET</span> <span class="url">/api/attendance</span>
+          <p class="grey-text text-lighten-1 mt-2">Get Today's Attendance for Current User.</p>
+        </div>
+      </div>
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method post">POST</span> <span class="url">/api/attendance/check-in</span>
+        </div>
+      </div>
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method post">POST</span> <span class="url">/api/attendance/check-out</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- LEAVES -->
+    <section id="leaves">
+      <h4 class="pink-text text-lighten-2">Leave Requests</h4>
+
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method get">GET</span> <span class="url">/api/leaves</span>
+          <p class="grey-text text-lighten-1 mt-2">Get My Leaves (History).</p>
+        </div>
+      </div>
+
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method post">POST</span> <span class="url">/api/leaves</span>
+          <p class="grey-text text-lighten-1 mt-2">Submit a new Leave Request.</p>
+        </div>
+      </div>
+
+      <div class="">
+        <ul class="tabs tabs-transparent" style="background-color: #1e1e1e;">
+          <li class="tab col s3"><a class="active" href="#leave-params">Payload (JSON)</a></li>
+        </ul>
+        <div id="leave-params" class="col s12 card-panel-dark p-4">
+          <pre class="code-block">
+{
+  "leaveType": "Sick Leave", // Or Annual, Casual
+  "startDate": "2024-03-01",
+  "endDate": "2024-03-03",
+  "reason": "Flu"
+}</pre>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- APPLICATIONS -->
+    <section id="applications">
+      <h4 class="blue-text text-lighten-2">Job Applications</h4>
+
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method post">POST</span> <span class="url">/api/applications</span>
+          <p class="grey-text text-lighten-1 mt-2">Public endpoint for submitting job applications.</p>
+        </div>
+      </div>
+
+      <div class="">
+        <ul class="tabs tabs-transparent" style="background-color: #1e1e1e;">
+          <li class="tab col s3"><a class="active" href="#app-params">Payload (FormData)</a></li>
+        </ul>
+        <div id="app-params" class="col s12 card-panel-dark p-4">
+          <table class="highlight responsive-table">
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Type</th>
+                <th>Required</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="blue-text text-lighten-2">fullName</td>
+                <td class="type-col">String</td>
+                <td class="required">Yes</td>
+              </tr>
+              <tr>
+                <td class="blue-text text-lighten-2">email</td>
+                <td class="type-col">String</td>
+                <td class="required">Yes</td>
+              </tr>
+              <tr>
+                <td class="blue-text text-lighten-2">phone</td>
+                <td class="type-col">String</td>
+                <td class="required">Yes</td>
+              </tr>
+              <tr>
+                <td class="blue-text text-lighten-2">cv</td>
+                <td class="type-col">File</td>
+                <td class="required">Yes</td>
+              </tr>
+              <tr>
+                <td class="blue-text text-lighten-2">position</td>
+                <td class="type-col">ID</td>
+                <td class="required">Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- USERS -->
+    <section id="users">
+      <h4 class="indigo-text text-lighten-2">User Management</h4>
+
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method get">GET</span> <span class="url">/api/users/profile</span>
+          <p class="grey-text text-lighten-1 mt-2">Get Current User Profile.</p>
+        </div>
+      </div>
+
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method post">POST</span> <span class="url">/api/users/change-password</span>
+          <p class="grey-text text-lighten-1 mt-2">Change Password.</p>
+        </div>
+      </div>
+
+      <div class="card card-panel-dark endpoint-card">
+        <div class="card-content">
+          <span class="chip-method get">GET</span> <span class="url">/api/users/employees</span>
+          <p class="grey-text text-lighten-1 mt-2">List all Employees (Admin Only).</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.Sidenav.init(document.querySelectorAll('.sidenav'));
+      M.Tabs.init(document.querySelectorAll('.tabs'));
+    });
+  </script>
+</body>
+
+</html>

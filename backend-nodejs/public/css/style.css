@@ -1,0 +1,302 @@
+
+/* almarai font */
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap");
+  
+:root {
+  --font-family-main: "Almarai", "Roboto", sans-serif !important;
+}
+
+html,body {
+  font-size: 1rem;
+  font-family: var(--font-family-main);
+}
+
+.home-page {
+  display: grid;
+  place-content: center;
+}
+
+.home-page :is(h1, p) {
+  font-family: "Share Tech Mono", monospace;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #121212;
+  color: #e0e0e0;
+  padding: 1rem;
+}
+
+.container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+span.badge {
+  margin-inline: 1rem;
+}
+
+.row {
+  margin-inline: -15px;
+}
+
+.method-badge {
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 5px 10px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.method-post {
+  background-color: #4CAF50;
+}
+
+.method-get {
+  background-color: #2196F3;
+}
+
+.method-put {
+  background-color: #FF9800;
+}
+
+.method-delete {
+  background-color: #F44336;
+}
+
+h2,
+h5 {
+  color: #ffffff;
+}
+
+h6 {
+  color: #b0bec5;
+  font-weight: bold;
+}
+
+p {
+  color: #bdbdbd;
+}
+
+.btn-flat {
+  color: #90caf9;
+}
+
+.btn-flat:hover {
+  background-color: rgba(144, 202, 249, 0.1);
+}
+
+.card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.endpoint-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #333;
+}
+
+.endpoint-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+  border-color: #555;
+}
+
+pre {
+  background-color: #000000;
+  border: 1px solid #333;
+  color: #81c784;
+  padding: 15px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.9rem;
+}
+
+.url {
+  font-family: monospace;
+  font-size: 1.1rem;
+  margin-left: 10px;
+  color: #90caf9;
+}
+
+.header-section {
+  margin-bottom: 30px;
+}
+
+/* --- Documentation Pages Styles --- */
+
+/* Sidebar */
+.sidenav-fixed {
+  background-color: #1e1e1e;
+  border-right: 1px solid #333;
+  width: 280px;
+  padding-top: 20px;
+  transform: translateX(0%);
+  /* Ensure visible on large screens */
+}
+
+.sidenav-fixed li a {
+  color: #b0bec5;
+}
+
+.sidenav-fixed li a:hover,
+.sidenav-fixed li.active {
+  background-color: rgba(144, 202, 249, 0.1);
+  color: #90caf9;
+}
+
+.sidenav-fixed .logo-text {
+  padding: 0 32px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.sidenav-fixed .subheader {
+  color: #757575;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 32px;
+  margin-top: 15px;
+}
+
+/* Main Content */
+main {
+  padding-left: 300px;
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 50px;
+}
+
+@media only screen and (max-width : 992px) {
+  main {
+    padding-left: 0;
+    padding: 20px;
+  }
+
+  .sidenav-fixed {
+    transform: translateX(-105%);
+  }
+}
+
+/* Section Spacing */
+section {
+  margin-bottom: 60px;
+  padding-top: 20px;
+}
+
+/* Cards */
+.card-panel-dark {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  color: #e0e0e0;
+}
+
+/* Tables */
+table.highlight>tbody>tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+th {
+  color: #90caf9;
+}
+
+td {
+  color: #e0e0e0;
+}
+
+.required {
+  color: #ef5350;
+  font-weight: bold;
+}
+
+.type-col {
+  color: #bdbdbd;
+  font-family: monospace;
+}
+
+/* Code Blocks */
+pre.code-block {
+  position: relative;
+  background-color: #0d0d0d;
+  border: 1px solid #333;
+  color: #a5d6a7;
+  padding: 20px;
+  border-radius: 6px;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.2s;
+}
+
+.copy-btn:hover {
+  background-color: #555;
+}
+
+/* Collapsible */
+.collapsible {
+  border: 1px solid #333;
+}
+
+.collapsible-header {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-bottom: 1px solid #333;
+}
+
+.collapsible-body {
+  background-color: #121212;
+  border-bottom: 1px solid #333;
+}
+
+/* Chips/Badges */
+.chip-method {
+  display: inline-block;
+  padding: 0 12px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 32px;
+  margin-right: 10px;
+  color: white;
+}
+
+.post {
+  background-color: #4CAF50;
+}
+
+.get {
+  background-color: #2196F3;
+}
+
+/* Helper Utilities */
+.text-indigo {
+  color: #5c6bc0 !important;
+}
+
+.text-green {
+  color: #66bb6a !important;
+}
+
+.divider {
+  background-color: #333;
+  margin: 30px 0;
+}

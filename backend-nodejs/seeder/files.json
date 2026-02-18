@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Employee Handbook",
+    "path": "/files/handbook.pdf",
+    "extension": "pdf",
+    "category": "5f8d0d55b54764421b7156c9",
+    "active": true
+  },
+  {
+    "title": "Security Policy",
+    "path": "/files/security.pdf",
+    "extension": "pdf",
+    "category": "5f8d0d55b54764421b7156f3",
+    "active": true
+  },
+  {
+    "title": "Leave Policy",
+    "path": "/files/leave.pdf",
+    "extension": "pdf",
+    "category": "5f8d0d55b54764421b7156f3",
+    "active": true
+  },
+  {
+    "title": "Expense Form",
+    "path": "/files/expense.xlsx",
+    "extension": "xlsx",
+    "category": "5f8d0d55b54764421b7156c9",
+    "active": true
+  },
+  {
+    "title": "IT Request Form",
+    "path": "/files/it_request.docx",
+    "extension": "docx",
+    "category": "5f8d0d55b54764421b7156c9",
+    "active": true
+  },
+  {
+    "title": "Brand Guidelines",
+    "path": "/files/brand.pdf",
+    "extension": "pdf",
+    "category": "5f8d0d55b54764421b7156c9",
+    "active": true
+  },
+  {
+    "title": "Phone Directory",
+    "path": "/files/contacts.xlsx",
+    "extension": "xlsx",
+    "category": "5f8d0d55b54764421b7156c9",
+    "active": true
+  },
+  {
+    "title": "Project Template",
+    "path": "/files/template.pptx",
+    "extension": "pptx",
+    "category": "5f8d0d55b54764421b7156c9",
+    "active": true
+  },
+  {
+    "title": "Meeting Minutes",
+    "path": "/files/minutes.docx",
+    "extension": "docx",
+    "category": "5f8d0d55b54764421b7156c9",
+    "active": true
+  },
+  {
+    "title": "Annual Report 2023",
+    "path": "/files/report2023.pdf",
+    "extension": "pdf",
+    "category": "5f8d0d55b54764421b7156f5",
+    "active": true
+  },
+  {
+    "title": "Q1 Goals",
+    "path": "/files/q1goals.pdf",
+    "extension": "pdf",
+    "category": "5f8d0d55b54764421b7156f5",
+    "active": true
+  },
+  {
+    "title": "Org Chart",
+    "path": "/files/orgchart.png",
+    "extension": "png",
+    "category": "5f8d0d55b54764421b7156c9",
+    "active": true
+  }
+]
