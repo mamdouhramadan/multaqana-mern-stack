@@ -2,11 +2,13 @@
   "info": {
     "_postman_id": "multaqana-collection-id",
     "name": "Multaqana API",
+    "description": "REST API for the Multaqana backend. Base URL: http://localhost:5000/api. Run **Auth → Login** first to set the JWT token; other requests use Bearer auth automatically.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
     {
       "name": "Auth",
+      "auth": { "type": "noauth" },
       "item": [
         {
           "name": "Login",
@@ -17,7 +19,7 @@
                 "exec": [
                   "var jsonData = pm.response.json();",
                   "if (jsonData.success && jsonData.data && jsonData.data.accessToken) {",
-                  "    pm.environment.set(\"jwt_token\", jsonData.data.accessToken);",
+                  "    pm.collectionVariables.set(\"jwt_token\", jsonData.data.accessToken);",
                   "    console.log(\"Token updated\");",
                   "}"
                 ],
@@ -187,7 +189,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/applications{{app-id}}",
+              "raw": "{{baseUrl}}/applications/{{app-id}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -321,7 +323,7 @@
               ]
             },
             "url": {
-              "raw": "{{baseUrl}}/applications{{app-id}}",
+              "raw": "{{baseUrl}}/applications/{{app-id}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -340,7 +342,7 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/applications{{app-id}}",
+              "raw": "{{baseUrl}}/applications/{{app-id}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -694,7 +696,7 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/faqs{{faq-id}}",
+              "raw": "{{baseUrl}}/faqs/{{faq-id}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -713,7 +715,7 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/faqs{{faq-id}}",
+              "raw": "{{baseUrl}}/faqs/{{faq-id}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -769,7 +771,7 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/files{{file-id}}",
+              "raw": "{{baseUrl}}/files/{{file-id}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -980,19 +982,13 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/leaves/:id",
+              "raw": "{{baseUrl}}/leaves/{{leave-id}}",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "leaves",
-                ":id"
-              ],
-              "variable": [
-                {
-                  "key": "id",
-                  "value": ""
-                }
+                "{{leave-id}}"
               ]
             }
           },
@@ -1632,7 +1628,7 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/notifications{{notification-id}}",
+              "raw": "{{baseUrl}}/notifications/{{notification-id}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -1691,20 +1687,14 @@
             "method": "PATCH",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/notifications/:id/read",
+              "raw": "{{baseUrl}}/notifications/{{notification-id}}/read",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "notifications",
-                ":id",
+                "{{notification-id}}",
                 "read"
-              ],
-              "variable": [
-                {
-                  "key": "id",
-                  "value": ""
-                }
               ]
             }
           }
@@ -1880,12 +1870,22 @@
   "variable": [
     {
       "key": "baseUrl",
-      "value": "http://localhost:5001/api",
+      "value": "http://localhost:5000/api",
       "type": "string"
     },
     {
       "key": "jwt_token",
       "value": "",
+      "type": "string"
+    },
+    {
+      "key": "user-email",
+      "value": "admin@example.com",
+      "type": "string"
+    },
+    {
+      "key": "user-password",
+      "value": "YourPassword123!",
       "type": "string"
     }
   ]
